@@ -1,0 +1,17 @@
+.product-default {
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/default-product.png) no-repeat center center fixed;
+  background-size: contain;
+}
+
+.license {
+  position: absolute;
+  bottom: 0;
+  color: #abb1aa;
+  background-color: rgba(255, 255, 255, 0.5)
+}
+
+.license a {
+  color: #abb1aa;
+}
