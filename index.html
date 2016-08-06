@@ -2,28 +2,67 @@
 <html>
   <head>
     <title> Sniffypedia </title>
-    <style>
-      #title {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-top: -120px;
-        margin-left: -240px;
-        width: 480px;
-        height: 240px;
-      }​
-    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/sniffypedia.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.1/ui-bootstrap-tpls.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+    <script type="text/javascript" src="js/sniffypedia.js"></script>
   </head>
-  <body>
-    <div id="title">
-      <h1 class="text-center"> Sniffypedia </h1>
-      <p class="text-center">
-        <a href="https://github.com/reelyactive/sniffypedia"
-           class="btn btn-default"> Browse entries </a>
-      </p>
-      <div class="well">
-        <small> This Sniffypedia is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/.  Any rights in individual contents of the database are licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ </small>
+  <body ng-app="sniffypedia">
+    <div ng-controller="InteractionCtrl" id="content">
+      <div id="title">
+        <h1 class="text-center"> Sniffypedia </h1>
+        <hr>
+        <div class="center-block">
+          <div class="btn-group" uib-dropdown>
+            <button id="select-protocol" type="button" class="btn btn-default"
+                    uib-dropdown-toggle>
+              {{protocol}} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu"
+                aria-labelledby="select-protocol">
+              <li role="menuitem" ng-repeat="(key, value) in index">
+                <a ng-click="$parent.protocol = key"> {{key}} </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group" uib-dropdown>
+            <button id="select-identifier" type="button"
+                    class="btn btn-default" uib-dropdown-toggle>
+              {{identifier}} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu"
+                aria-labelledby="select-identifier">
+              <li role="menuitem" ng-repeat="(key, value) in index[protocol]">
+                <a ng-click="$parent.identifier = key"> {{key}} </a>
+              </li>
+            </ul>
+          </div>
+          <div class="btn-group" uib-dropdown>
+            <button id="select-value" type="button"
+                    class="btn btn-default" uib-dropdown-toggle>
+              {{value}} <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" uib-dropdown-menu role="menu"
+                aria-labelledby="select-value">
+              <li role="menuitem"
+                  ng-repeat="(key, value) in index[protocol][identifier]">
+                <a ng-click="$parent.value = key"> {{key}} </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <p class="text-center">
+          <br>
+          <a ng-href="{{index[protocol][identifier][value]}}">
+            {{index[protocol][identifier][value]}}
+          </a>
+        </p>
+        <div class="well">
+          <small> This Sniffypedia is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/.  Any rights in individual contents of the database are licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ </small>
+        </div>
       </div>
     </div>
   </body>
