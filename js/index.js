@@ -16,7 +16,8 @@ var ble_uuid16 = {
 
 // Bluetooth Low Energy 128-bit UUIDs
 var ble_uuid128 = {
-  "7265656c794163746976652055554944": "Product/reelyActive_RA-R436"
+  "7265656c794163746976652055554944": "Product/reelyActive_RA-R436",
+  "7265656c7941707020416e64726f6964": "Product/reelyActive_reelyApp-Android"
 };
 
 
