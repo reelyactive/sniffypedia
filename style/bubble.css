@@ -1,0 +1,95 @@
+.bubble {
+  font-family: 'Open Sans', sans-serif;
+  display: inline-block;
+}
+
+.bubble--photo {
+  z-index: 10;
+  text-align: center;
+  -moz-background-clip: padding;     /* Firefox 3.6 */
+  -webkit-background-clip: padding;  /* Safari 4? Chrome 6? */
+  background-clip: padding-box;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: solid rgba(255, 255, 255, 0.2);
+  box-sizing: content-box;
+  position: relative;
+}
+
+.bubble--label {
+  position: relative;
+  float: center;
+  font-weight: 600;
+  color: white;
+  z-index: 11;
+  display: inline-block;
+  background-color: rgba(0, 0, 0, 0.9);
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.bubble--icon {
+  display: none;
+  position: absolute;
+  font-weight: 800;
+  text-decoration: none !important;
+  color: black !important;
+  box-shadow: none;
+  background-size: 100%;
+  opacity: 0.9;
+}
+
+.bubble--icon:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 1.0;
+}
+
+.bubble--icon-naked {
+  background-color: white;
+}
+
+.bubble--icon-naked:hover, .bubble--icon-naked:active {
+  background: #676767; /* Old browsers */
+  background: -moz-linear-gradient(top, #676767 0%, #000000 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#676767), color-stop(100%,#000000)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #676767 0%,#000000 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #676767 0%,#000000 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #676767 0%,#000000 100%); /* IE10+ */
+  background: linear-gradient(to bottom, #676767 0%,#000000 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#676767', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+  color: white !important;
+}
+
+.tooltip {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.tooltip:hover {
+  cursor: default;
+}
+
+.bubble--toggle {
+  width: 100%;
+  text-align: center;
+}
+
+.bubble--toggle--button {
+  display: inline-block;
+  margin: 10px 5px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  border-radius: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.bubble--toggle--button:hover {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.bubble--toggle--button.selected {
+  color: black;
+  background-color: white;
+}

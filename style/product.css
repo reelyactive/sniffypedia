@@ -1,3 +1,11 @@
+body {
+  background-color: #0770a2;
+}
+
+.bubble-container {
+  padding: 120px;
+}
+
 .product-default {
   width: 100vw;
   height: 100vh;
@@ -9,7 +17,7 @@
   position: absolute;
   bottom: 0;
   color: #abb1aa;
-  background-color: rgba(255, 255, 255, 0.5)
+  background-color: rgba(255, 255, 255, 0.9)
 }
 
 .license a {
