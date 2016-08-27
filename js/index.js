@@ -31,7 +31,8 @@ var ble_companyIdentifiers = {
 
 // Bluetooth Low Energy iBeacons (128-bit UUIDs)
 var ble_iBeacons = {
-  "b9407f30f5f8466eaff925556b57fe6d": "Product/Estimote_Beacon"
+  "b9407f30f5f8466eaff925556b57fe6d": "Product/Estimote_Beacon",
+  "f7826da64fa24e988024bc5b71e0893e": "Product/Kontakt_Beacon"
 };
 
 
