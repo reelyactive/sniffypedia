@@ -21,6 +21,7 @@ var ble_uuid128 = {
   "7265656c7941707020416e64726f6964": "Product/reelyActive_reelyApp-Android",
   "7265656c7941707020666f7220694f53": "Product/reelyActive_reelyApp-iOS",
   "cbbfe0e1f7f3420684e084cbb3d09dfc": "Product/ASUS_Nexus-Player",
+  "d2d3f8ef9c994d9ca2b391c85d44326c": "Product/Nest_Cam",
   "d5060001a904deb947482c7f4a124842": "Product/Thalmic-Labs_Myo"
 };
 
