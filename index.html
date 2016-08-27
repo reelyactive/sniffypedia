@@ -7,8 +7,14 @@
     <link rel="stylesheet" href="style/sniffypedia.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.1/ui-bootstrap-tpls.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
+    <link rel="stylesheet" href="style/bubble.css">
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/sniffypedia.js"></script>
+    <script type="text/javascript" src="js/bubble.js"></script>
+    <script type="text/javascript" src="js/cormorant.js"></script>
+    <script type="text/javascript" src="js/cuttlefish.js"></script>
+    <script type="text/javascript" src="js/visualisation.js"></script>
   </head>
   <body ng-app="sniffypedia">
     <div ng-controller="InteractionCtrl" class="container-fluid">
@@ -71,7 +77,10 @@
           </div>
         </div>
         <div class="col-md-6 bubble-background">
-          <!-- Bubble goes here -->
+          <div class="bubble-container">
+            <bubble ng-if="story" json="story" size="240px" toggle="false">
+            </bubble>
+          </div>
         </div>
       </div>
     </div>

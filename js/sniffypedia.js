@@ -15,7 +15,8 @@
  * - cormorant (reelyActive)
  * - cuttlefish (reelyActive)
  */
-angular.module('sniffypedia', [ 'ui.bootstrap' ])
+angular.module('sniffypedia', [ 'ui.bootstrap', 'reelyactive.cormorant',
+                                'reelyactive.cuttlefish' ])
 
 
 /**
@@ -29,5 +30,19 @@ angular.module('sniffypedia', [ 'ui.bootstrap' ])
   $scope.protocol = 'Select protocol';
   $scope.identifier = 'Select identifier';
   $scope.value = 'Select value';
+
+  $scope.story = {
+    "@context": {
+      "schema": "http://schema.org/"
+    },
+    "@graph": [
+      {
+        "@id": "product",
+        "@type": "schema:Product",
+        "schema:name": "Sniffypedia",
+        "schema:image": "http://sniffypedia.org/images/working-logo.png"
+      }
+    ]
+  };
 
 });
