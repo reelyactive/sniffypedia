@@ -114,16 +114,25 @@
             <li> paste over the <code>/* PASTE STRUCTURED DATA HERE */</code> comment the structured data you created in Step 4
             <li> save the file
           </ul>
-          <h3> 6. Commit your changes </h3>
-          <p> From the root of your local copy of the repository, first add the files you created, namely the index.html and possibly an image file: </p>
+          <h3> 6. Add the identifier to index.js </h3>
+          <p> Next we'll create the association between the Product's identifier and the structured data you created above.  Complete the following steps: </p>
+          <ul>
+            <li> open the local <a href="https://github.com/reelyactive/sniffypedia/blob/gh-pages/js/index.js" target="_blank">js/index.js</a> file in a text editor
+            <li> browse to the corresponding identifier type
+            <li> add the identifier and the path to the structured data, taking care to observe the precedent of the existing entries
+            <li> save the file
+          </ul>
+          <h3> 7. Commit your changes </h3>
+          <p> From the root of your local copy of the repository, first add the files you created, namely the index.html and possibly an image file, in addition to the index.js: </p>
           <pre>
 git add Product/CompanyName_ProductName/index.html
-git add Product/CompanyName_ProductName/320x320.png</pre>
+git add Product/CompanyName_ProductName/320x320.png
+git add js/index.js</pre>
           <p> Then commit the changes including a message: </p>
           <pre>
 git commit -m "Added CompanyName ProductName"</pre>
-          <h3> 7. Create a GitHub pull request </h3>
-          <p> Info to come! </p>
+          <h3> 8. Create a GitHub pull request </h3>
+          <p> Go ahead, push your code!  More details to come... </p>
           <hr>
           <p class="text-center">
             <a href="../" class="btn btn-default">Home</a> &nbsp;
