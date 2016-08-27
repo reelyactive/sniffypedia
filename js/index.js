@@ -18,7 +18,8 @@ var ble_uuid16 = {
 var ble_uuid128 = {
   "7265656c794163746976652055554944": "Product/reelyActive_RA-R436",
   "7265656c7941707020416e64726f6964": "Product/reelyActive_reelyApp-Android",
-  "7265656c7941707020666f7220694f53": "Product/reelyActive_reelyApp-iOS"
+  "7265656c7941707020666f7220694f53": "Product/reelyActive_reelyApp-iOS",
+  "d5060001a904deb947482c7f4a124842": "Product/Thalmic-Labs_Myo"
 };
 
 
