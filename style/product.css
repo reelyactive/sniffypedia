@@ -1,9 +1,10 @@
 body {
   background-color: #0770a2;
+  margin-bottom: 60px;
 }
 
 .bubble-container {
-  padding: 120px;
+  padding: 60px;
 }
 
 .product-default {
@@ -23,3 +24,25 @@ body {
 .license a {
   color: #abb1aa;
 }
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  margin-top: 30px;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  color: #abb1aa;
+  background-color: #5a5a5a;
+  text-align: center;
+  overflow: hidden;
+}
+
+  .footer a {
+    color: #abb1aa;
+  }
+
+  .footer a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
