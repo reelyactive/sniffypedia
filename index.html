@@ -15,6 +15,42 @@
     <script type="text/javascript" src="js/cormorant.js"></script>
     <script type="text/javascript" src="js/cuttlefish.js"></script>
     <script type="text/javascript" src="js/visualisation.js"></script>
+
+    <!-- Metadata, the non-Schema/JSON-LD way. Inefficiencies. Yuck! -->
+    <meta name="description" content="An open, collaborative repository of radio-identifiable (sniffable) things, represented as structured data.">
+    <meta itemprop="name" content="Sniffypedia">
+    <meta itemprop="description" content="An open, collaborative repository of radio-identifiable (sniffable) things, represented as structured data.">
+    <meta itemprop="image" content="images/social-share.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@reelyActive">
+    <meta name="twitter:title" content="Sniffypedia">
+    <meta name="twitter:description" content="An open, collaborative repository of radio-identifiable (sniffable) things, represented as structured data.">
+    <meta name="twitter:creator" content="@reelyActive">
+    <meta name="twitter:image:src" content="images/social-share.png">
+    <meta property="og:title" content="Sniffypedia" />
+    <meta property="og:url" content="http://sniffypedia.org" />
+    <meta property="og:image" content="images/social-share.png" />
+    <meta property="og:description" content="An open, collaborative repository of radio-identifiable (sniffable) things, represented as structured data." />
+    <meta property="og:site_name" content="Sniffypedia" />
+
+    <!-- Metadata, the Schema/JSON-LD way. Yay! -->
+    <script type="application/ld+json">
+    {
+      "@context": {
+        "schema": "http://schema.org/"
+      },
+      "@graph": [
+        {
+          "@id": "sniffypedia",
+          "@type": "schema:Dataset",
+          "schema:name": "Sniffypedia",
+          "schema:url": "http://sniffypedia.org/",
+          "schema:creator": "http://reelyactive.com",
+          "schema:image": "http://sniffypedia.org/images/social-share.png"
+        }
+      ]
+    }
+    </script>
   </head>
   <body ng-app="sniffypedia">
     <div ng-controller="InteractionCtrl" class="container-fluid">
