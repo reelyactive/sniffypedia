@@ -44,6 +44,7 @@ var ble_iBeacons = {
   "dab59c4fa4d6ee286bfe8e0000bbc2bb": "Product/Cocoanut-Manor_eNote",
   "e2c56db5dffb48d2b060d0f5a71096e0": "Product/Bright_Beacon",
   "f0018b9b75094c31a9051a27d39c003c": "Product/Locoslab_Beacon",
+  "f3077abe93ac465aacf167f080cb7aef": "Product/The-Bubbles-Company_Beacon",
   "f7826da64fa24e988024bc5b71e0893e": "Product/Kontakt_Beacon"
 };
 
