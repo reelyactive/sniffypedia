@@ -6,7 +6,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style/sniffypedia.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.1/ui-bootstrap-tpls.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.2/ui-bootstrap-tpls.min.js"></script>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
     <link rel="stylesheet" href="style/bubble.css">
     <script type="text/javascript" src="js/index.js"></script>
@@ -22,8 +22,8 @@
         <div class="col-md-6">
           <h1 class="text-center"> Sniffypedia </h1>
           <p class="lead text-center"> An open, collaborative repository of radio-identifiable, or "sniffable", things, represented as structured data. </p>
-          <p> There are billions of radio-identifiable "things" on our planet today, and there are billions more produced each year.  Many of these will <i>actively</i> emit an identifiable radio signal (<i>Active</i> RFID such as Bluetooth Low Energy advertise mode).  And even more will <i>passively</i> reflect an identifiable radio signal when excited by a reader (<i>Passive</i> RFID such as RAIN). </p>
-          <p> The Sniffypedia project allows anyone to contribute information about the these "things" and their associated identifiers, not unlike a phone book for the Internet of Things.  Every "thing" is represented as structured data in the form of machine-readable Schema.org and JSON-LD as championed by the major search engines, and includes a human-readable HTML representation.  In future, we would expect product manufacturers to host such representations on their own servers at which point Sniffypedia would instead point to their URL. </p>
+          <p class="text-justify"> There are billions of radio-identifiable "things" on our planet today, and there are billions more produced each year.  Many of these will <i>actively</i> emit an identifiable radio signal (<i>Active</i> RFID such as Bluetooth Low Energy advertise mode).  And even more will <i>passively</i> reflect an identifiable radio signal when excited by a reader (<i>Passive</i> RFID such as RAIN). </p>
+          <p class="text-justify"> The Sniffypedia project allows anyone to contribute information about the these "things" and their associated identifiers, not unlike a phone book for the Internet of Things.  Every "thing" is represented as structured data in the form of machine-readable Schema.org and JSON-LD as championed by the major search engines, and includes a human-readable HTML representation.  In future, we would expect product manufacturers to host such representations on their own servers at which point Sniffypedia would instead point to their URL. </p>
           <hr>
           <h3> Search by identifier: </h3>
           <div class="center-block">
@@ -70,12 +70,16 @@
             </div>
           </div>
           <h3> Search by name: </h3>
-          <p> Coming soon. </p>
+          <input type="text" class="form-control"
+                 placeholder="Start typing the name of some thing"
+                 uib-typeahead="thing for thing in things | filter:$viewValue |
+                                limitTo:8" ng-model="nameQuery"
+                 typeahead-on-select="updateStory($item)">
           <hr>
           <div class="well text-center"
-               ng-show="index[protocol][identifier][value]">
-            <a class="lead" ng-href="{{index[protocol][identifier][value]}}"
-               target="_blank"> {{index[protocol][identifier][value]}} </a>
+               ng-show="selectedUrl">
+            <a class="lead" ng-href="{{selectedUrl}}" target="_blank">
+              {{sel </a>
           </div>
         </div>
         <div class="col-md-6 bubble-background">

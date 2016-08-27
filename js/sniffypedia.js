@@ -46,12 +46,34 @@ angular.module('sniffypedia', [ 'ui.bootstrap', 'reelyactive.cormorant',
   $scope.identifier = 'Select identifier';
   $scope.value = 'Select value';
   $scope.story = SNIFFYPEDIA_STORY;
+  $scope.things = compileThings($scope.index);
+  $scope.selectedUrl;
+
+  // Return the array of "things" for typeahead
+  function compileThings(index) {
+    var things = [];
+    for(cProtocol in index) {
+      var protocol = index[cProtocol];
+      for(cIdentifier in protocol) {
+        var identifier = protocol[cIdentifier];
+        for(cValue in identifier) {
+          var thing = identifier[cValue];
+          if(things.indexOf(thing) < 0) {
+            things.push(thing);
+          }
+        }
+      }
+    }
+    return things;
+  }
 
   $scope.updateStory = function(url) {
     delete $scope.story;
     cormorant.getStory(url, function(story, url) {
       $scope.story = story;
+      $scope.selectedUrl = url;
+      $scope.nameQuery = url;
     });
-  }
+  };
 
 });
