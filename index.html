@@ -61,7 +61,10 @@
                   aria-labelledby="select-value">
                 <li role="menuitem"
                     ng-repeat="(key, value) in index[protocol][identifier]">
-                  <a ng-click="$parent.value = key"> {{key}} </a>
+                  <a ng-click="$parent.value = key;
+                               updateStory(index[protocol][identifier][key])">
+                    {{key}}
+                  </a>
                 </li>
               </ul>
             </div>
@@ -71,9 +74,8 @@
           <hr>
           <div class="well text-center"
                ng-show="index[protocol][identifier][value]">
-            <a class="lead" ng-href="{{index[protocol][identifier][value]}}">
-              {{index[protocol][identifier][value]}}
-            </a>
+            <a class="lead" ng-href="{{index[protocol][identifier][value]}}"
+               target="_blank"> {{index[protocol][identifier][value]}} </a>
           </div>
         </div>
         <div class="col-md-6 bubble-background">
