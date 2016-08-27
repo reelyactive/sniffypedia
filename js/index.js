@@ -37,7 +37,7 @@ var ble_companyIdentifiers = {
 
 // Bluetooth Low Energy iBeacons (128-bit UUIDs)
 var ble_iBeacons = {
-  "07775dd0111b11e491910800200c9a66": "XY Findables Beacon",
+  "07775dd0111b11e491910800200c9a66": "Product/XY-Findables_Beacon",
   "2f234454cf6d4a0fadf2f4911ba9ffa6": "Product/Radius-Networks_Beacon",
   "3d4f13b4d1fd404980e5d3edcc840b69": "Product/Orange_Beacon",
   "8deefbb9f7384297804096668bb44281": "Product/Roximity_Beacon",
