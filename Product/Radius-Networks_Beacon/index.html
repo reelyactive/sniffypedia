@@ -1,0 +1,51 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> Radius Networks Beacon </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.2/ui-bootstrap-tpls.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
+    <link rel="stylesheet" href="../../style/bubble.css">
+    <link rel="stylesheet" href="../../style/product.css">
+    <script type="text/javascript" src="../../js/bubble.js"></script>
+    <script type="text/javascript" src="../../js/cormorant.js"></script>
+    <script type="text/javascript" src="../../js/cuttlefish.js"></script>
+    <script type="text/javascript" src="../../js/visualisation.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": {
+        "schema": "http://schema.org/"
+      },
+      "@graph": [
+        {
+          "@id": "product",
+          "@type": "schema:Product",
+          "schema:name": "Radius Networks Beacon",
+          "schema:manufacturer": {
+            "@type": "schema:Organization",
+            "schema:name": "Radius Networks"
+          },
+          "schema:model": "Beacon",
+          "schema:url": "http://sniffypedia.org/Product/Radius-Networks_Beacon/",
+          "schema:image": "http://sniffypedia.org/Product/Radius-Networks_Beacon/500x500.png",
+          "schema:sameAs": [
+            "https://twitter.com/RadiusNetworks",
+            "https://www.facebook.com/estimote",
+            "https://www.linkedin.com/company/radius-networks"
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body ng-app="visualisation">
+    <div ng-controller="BubbleCtrl" class="bubble-container">
+      <bubble ng-if="story" json="story" size="240px" toggle="false"></bubble>
+    </div>
+    <footer class="footer">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> &nbsp; This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </footer>
+  </body>
+</html>
