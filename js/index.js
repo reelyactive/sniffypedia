@@ -16,6 +16,7 @@ var ble_uuid16 = {
 
 // Bluetooth Low Energy 128-bit UUIDs
 var ble_uuid128 = {
+  "52052c11e701478299f58ce88dbb1500": "Product/Allegion_ENGAGE",
   "7265656c794163746976652055554944": "Product/reelyActive_RA-R436",
   "7265656c7941707020416e64726f6964": "Product/reelyActive_reelyApp-Android",
   "7265656c7941707020666f7220694f53": "Product/reelyActive_reelyApp-iOS",
