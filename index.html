@@ -11,59 +11,69 @@
     <script type="text/javascript" src="js/sniffypedia.js"></script>
   </head>
   <body ng-app="sniffypedia">
-    <div ng-controller="InteractionCtrl" id="content">
-      <div id="title">
-        <h1 class="text-center"> Sniffypedia </h1>
-        <hr>
-        <div class="center-block">
-          <div class="btn-group" uib-dropdown>
-            <button id="select-protocol" type="button" class="btn btn-default"
-                    uib-dropdown-toggle>
-              {{protocol}} <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" uib-dropdown-menu role="menu"
-                aria-labelledby="select-protocol">
-              <li role="menuitem" ng-repeat="(key, value) in index">
-                <a ng-click="$parent.protocol = key"> {{key}} </a>
-              </li>
-            </ul>
+    <div ng-controller="InteractionCtrl" class="container-fluid">
+      <div class="row">
+        <div class="col-md-6">
+          <h1 class="text-center"> Sniffypedia </h1>
+          <hr>
+          <h3> Search by identifier: </h3>
+          <div class="center-block">
+            <div class="btn-group" uib-dropdown>
+              <button id="select-protocol" type="button"
+                      class="btn btn-default" uib-dropdown-toggle>
+                {{protocol}} <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" uib-dropdown-menu role="menu"
+                  aria-labelledby="select-protocol">
+                <li role="menuitem" ng-repeat="(key, value) in index">
+                  <a ng-click="$parent.protocol = key"> {{key}} </a>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-group" uib-dropdown>
+              <button id="select-identifier" type="button"
+                      class="btn btn-default" uib-dropdown-toggle>
+                {{identifier}} <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" uib-dropdown-menu role="menu"
+                  aria-labelledby="select-identifier">
+                <li role="menuitem"
+                    ng-repeat="(key, value) in index[protocol]">
+                  <a ng-click="$parent.identifier = key"> {{key}} </a>
+                </li>
+              </ul>
+            </div>
+            <div class="btn-group" uib-dropdown>
+              <button id="select-value" type="button"
+                      class="btn btn-default" uib-dropdown-toggle>
+                {{value}} <span class="caret"></span>
+              </button>
+              <ul class="dropdown-menu" uib-dropdown-menu role="menu"
+                  aria-labelledby="select-value">
+                <li role="menuitem"
+                    ng-repeat="(key, value) in index[protocol][identifier]">
+                  <a ng-click="$parent.value = key"> {{key}} </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="btn-group" uib-dropdown>
-            <button id="select-identifier" type="button"
-                    class="btn btn-default" uib-dropdown-toggle>
-              {{identifier}} <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" uib-dropdown-menu role="menu"
-                aria-labelledby="select-identifier">
-              <li role="menuitem" ng-repeat="(key, value) in index[protocol]">
-                <a ng-click="$parent.identifier = key"> {{key}} </a>
-              </li>
-            </ul>
-          </div>
-          <div class="btn-group" uib-dropdown>
-            <button id="select-value" type="button"
-                    class="btn btn-default" uib-dropdown-toggle>
-              {{value}} <span class="caret"></span>
-            </button>
-            <ul class="dropdown-menu" uib-dropdown-menu role="menu"
-                aria-labelledby="select-value">
-              <li role="menuitem"
-                  ng-repeat="(key, value) in index[protocol][identifier]">
-                <a ng-click="$parent.value = key"> {{key}} </a>
-              </li>
-            </ul>
+          <h3> Search by name: </h3>
+          <p> Coming soon. </p>
+          <hr>
+          <div class="well text-center"
+               ng-show="index[protocol][identifier][value]">
+            <a class="lead" ng-href="{{index[protocol][identifier][value]}}">
+              {{index[protocol][identifier][value]}}
+            </a>
           </div>
         </div>
-        <p class="text-center">
-          <br>
-          <a ng-href="{{index[protocol][identifier][value]}}">
-            {{index[protocol][identifier][value]}}
-          </a>
-        </p>
-        <div class="well">
-          <small> This Sniffypedia is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/.  Any rights in individual contents of the database are licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ </small>
+        <div class="col-md-6 bubble-background">
+          <!-- Bubble goes here -->
         </div>
       </div>
     </div>
+    <footer class="footer">
+      <small> This Sniffypedia is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/.  Any rights in individual contents of the database are licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ </small>
+    </footer>
   </body>
 </html>
