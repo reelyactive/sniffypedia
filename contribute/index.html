@@ -1,0 +1,135 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> Contribute to Sniffypedia </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.2/ui-bootstrap-tpls.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
+    <link rel="stylesheet" href="../style/sniffypedia.css">
+    <script type="text/javascript" src="../js/contribute.js"></script>
+    <script type="text/javascript" src="../js/bubble.js"></script>
+    <script type="text/javascript" src="../js/cormorant.js"></script>
+    <script type="text/javascript" src="../js/cuttlefish.js"></script>
+    <script type="text/javascript" src="../js/visualisation.js"></script>
+  </head>
+  <body ng-app="contribute">
+    <div ng-controller="ContributionCtrl" class="container-fluid">
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+          <h1 class="text-center"> Contribute to Sniffypedia </h1>
+          <h2> Prerequisites </h2>
+          <h3> Skills </h3>
+          <p> In order to contribute some "thing", the only skills you'll need are a <a href="https://github.com/" target="_blank">GitHub account</a> and basic knowledge of <a href="https://git-scm.com/" target="_blank">git</a>.  The instructions below will assume you've cloned the <a href="https://github.com/reelyactive/sniffypedia" target="_blank">sniffypedia repository</a>. </p>
+          <h3> A "sniff" </h3>
+          <p> Every "thing" on Sniffypedia is associated with a radio-transmitted identifier.  Before contributing a new "thing", it's important to have a reliable radio "sniff" to validate the identifier it transmits, because you'll need to contribute that identifier as well! </p>
+          <p> Some identifiers are well documented, such as <a href="https://www.bluetooth.com/specifications/assigned-numbers/company-Identifiers" target="_blank">Bluetooth Company Identifier Codes</a>.  In such a case, a reliable "sniff" is no longer required - the identifier and associated Organization are both known. </p>
+          <h2> Contribute some "thing" </h2>
+          <p> You've met the Prerequisites above, and you're ready to contribute some "thing".  We'll take you through the process step-by-step, culminating in a git pull request. </p>
+          <h3> 1. Does it already exist in Sniffypedia? </h3>
+          <p> May we suggest you <a href="../index.html">visit the landing page</a> and check that: </p>
+          <ul>
+            <li> a search by identifier yields no results
+            <li> a search by name yields no results
+          </ul>
+          <p> Nothing?  Please continue! </p>
+          <h3> 2. Does it already exist on the web? </h3>
+          <p> May we suggest you test the "thing's" webpage for structured data by fetching its URL below: </p>
+          <form class="form-inline">
+            <div class="form-group">
+              <label for="url">Product URL</label>
+              <input type="url" class="form-control" id="url" ng-model="url"
+                     placeholder="http://myproduct.info">
+            </div>
+            <button type="submit" class="btn btn-default"
+                    ng-click="fetchStory(url)">Fetch</button>
+          </form> 
+          <br>
+          <pre ng-show="fetchedStory"> {{fetchedStory}} </pre>
+          <p> Nothing?  Please continue! </p>
+          <h3> 3. Create the Product directory </h3>
+          <p> In your working copy of the cloned repository, browse to the Product folder.  Create a new subfolder using the following naming convention based on the Wikipedia naming conventions: </p>
+          <p class="text-center"><b>CompanyName_ProductName</b></p>
+          <p> The following steps will add files to this folder. </p>
+          <h3> 4. Create structured data representation </h3>
+          <p> Enter the fields below to create a structured data representation of the Product using JSON-LD and Schema.org.  (Support for Organizations coming soon...) </p>
+          <div class="row">
+            <div class="col-xs-12 col-md-5">
+              <form role="form">
+                <div class="form-group">
+                  <label for="productName"> Name: </label>
+                    <input type="text" ng-change='change()'
+                           placeholder="2400MHz Reelceiver"
+                           class="form-control" ng-model="product.name"
+                           tooltip="Ex:2400MHz Reelceiver"
+                           tooltip-placement="right" id="productName"/>
+                </div>
+                <div class="form-group">
+                  <label for="productManufacturer"> Manufacturer: </label>
+                    <input type="text" placeholder="reelyActive"
+                           class="form-control" tooltip-placement="right"
+                           ng-model="product.manufacturer.name"
+                           ng-change='change()' tooltip="Ex:reelyActive"
+                           id="productManufacturer"/>
+                </div>
+                <div class="form-group">
+                  <label for="productModel"> Model: </label>
+                    <input type="text" placeholder="RA-R436"
+                           class="form-control" ng-model="product.model"
+                           ng-change='change()' tooltip="Ex:RA-R436"
+                           tooltip-placement="right" id="productModel"/>
+                </div>
+                <div class="form-group">
+                  <label for="productUrl"> Product URL: </label>
+                    <input type="url" placeholder="http://sniffypedia.org/Product/reelyActive_RA-R436/"
+                           class="form-control" ng-model="product.url"
+                           ng-change='change()' id="productUrl"/>
+                </div>
+                <div class="form-group">
+                  <label for="imageUrl"> Image URL: </label>
+                    <input type="url" placeholder="http://sniffypedia.org/Product/reelyActive_RA-R436/400x400.jpg"
+                           class="form-control" ng-model="product.image"
+                           ng-change='change()' id="imageUrl"/>
+                </div>
+              </form>
+              <i><b> Best practices: </b> copy a square image representing the Product or Organization to the directory you created in Step 3.  Name the image by its dimensions, for example: 320x320.png.  Specify the Image URL as the full path it will have on Sniffypedia. </i>
+            </div>
+            <div class="col-xs-12 col-md-7">
+              <pre>{{json | json}}</pre>
+              <!--<p class="text-center">
+                <button class="btn btn-primary" ng-click="webify()">
+                  Export to web
+                </button>
+              </p>-->
+            </div>
+          </div>
+          <h3> 5. Create the index.html </h3>
+          <p> Next we'll build the Product's index.html file by combining a template and the structured data created above.  Complete the following steps: </p>
+          <ul>
+            <li> copy the <a href="https://github.com/reelyactive/sniffypedia/tree/gh-pages/template/Product/index.html" target="_blank">template/Product/index.html</a> file of your local the repository to the folder you created in Step 3
+            <li> open the copied file in a text editor
+            <li> update the <b>CompanyName ProductName</b> in between the title tags near the top
+            <li> paste over the <code>/* PASTE STRUCTURED DATA HERE */</code> comment the structured data you created in Step 4
+            <li> save the file
+          </ul>
+          <h3> 6. Commit your changes </h3>
+          <p> From the root of your local copy of the repository, first add the files you created, namely the index.html and possibly an image file: </p>
+          <pre>
+git add Product/CompanyName_ProductName/index.html
+git add Product/CompanyName_ProductName/320x320.png</pre>
+          <p> Then commit the changes including a message: </p>
+          <pre>
+git commit -m "Added CompanyName ProductName"</pre>
+          <h3> 7. Create a GitHub pull request </h3>
+          <p> Info to come! </p>
+        </div>
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+    <footer class="footer">
+      <small> This Sniffypedia is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/.  Any rights in individual contents of the database are licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ </small>
+    </footer>
+  </body>
+</html>
