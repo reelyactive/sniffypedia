@@ -37,6 +37,7 @@ var ble_companyIdentifiers = {
   "0075": "Organization/Samsung",
   "0087": "Organization/Garmin_International",
   "008c": "Organization/Gimbal_Inc",
+  "00df": "Organization/Misfit_Inc",
   "0157": "Organization/Xiaomi",
   "015d": "Organization/Estimote_Inc"
 };
