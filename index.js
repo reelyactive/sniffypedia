@@ -12,6 +12,7 @@
 var ble_uuid16 = {
   "feed": "Product/Tile_Tile",
   "feb2": "Organization/Microsoft",
+  "feaa": "Product/Google_Eddystone",
   "fe9a": "Organization/Estimote_Inc"
 };
 
