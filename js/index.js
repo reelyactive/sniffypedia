@@ -11,6 +11,7 @@
 // See: https://www.bluetooth.com/specifications/assigned-numbers/16-bit-uuids-for-members
 var ble_uuid16 = {
   "feed": "Product/Tile_Tile",
+  "feb2": "Organization/Microsoft",
   "fe9a": "Organization/Estimote_Inc"
 };
 
