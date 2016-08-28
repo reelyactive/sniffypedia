@@ -73,3 +73,4 @@ var sniffypedia_index = {
 };
 
 
+module.exports.index = sniffypedia_index;
