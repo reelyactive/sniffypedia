@@ -33,7 +33,8 @@ var ble_uuid128 = {
 var ble_companyIdentifiers = {
   "004c": "Organization/Apple_Inc",
   "008c": "Organization/Gimbal_Inc",
-  "0157": "Organization/Xiaomi"
+  "0157": "Organization/Xiaomi",
+  "015d": "Organization/Estimote_Inc"
 };
 
 
