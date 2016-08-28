@@ -10,7 +10,8 @@
 // Bluetooth Low Energy 16-bit UUIDs
 // See: https://www.bluetooth.com/specifications/assigned-numbers/16-bit-uuids-for-members
 var ble_uuid16 = {
-  "feed": "Product/Tile_Tile"
+  "feed": "Product/Tile_Tile",
+  "fe9a": "Organization/Estimote_Inc"
 };
 
 
