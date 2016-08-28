@@ -32,6 +32,7 @@ var ble_uuid128 = {
 // See:https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers
 var ble_companyIdentifiers = {
   "004c": "Organization/Apple_Inc",
+  "0075": "Organization/Samsung",
   "008c": "Organization/Gimbal_Inc",
   "0157": "Organization/Xiaomi",
   "015d": "Organization/Estimote_Inc"
