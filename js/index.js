@@ -31,7 +31,8 @@ var ble_uuid128 = {
 // Bluetooth Low Energy company identifiers
 // See:https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers
 var ble_companyIdentifiers = {
-  "004c": "Organization/Apple_Inc"
+  "004c": "Organization/Apple_Inc",
+  "008c": "Organization/Gimbal_Inc"
 };
 
 
