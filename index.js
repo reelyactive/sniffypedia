@@ -39,6 +39,7 @@ var ble_companyIdentifiers = {
   "0087": "Organization/Garmin_International",
   "008c": "Organization/Gimbal_Inc",
   "00df": "Organization/Misfit_Inc",
+  "0131": "Organization/Cypress_Semiconductor_Corporation",
   "0157": "Organization/Xiaomi",
   "015d": "Organization/Estimote_Inc"
 };
@@ -57,7 +58,6 @@ var ble_iBeacons = {
   "f3077abe93ac465aacf167f080cb7aef": "Product/The-Bubbles-Company_Beacon",
   "f7826da64fa24e988024bc5b71e0893e": "Product/Kontakt_Beacon"
 };
-
 
 // Bluetooth Low Energy
 var ble = {
