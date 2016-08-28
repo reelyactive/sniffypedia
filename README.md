@@ -1,8 +1,25 @@
 Sniffypedia
 ===========
 
-We believe in an open Internet of Things.
+This is the index to Sniffypedia, which is hosted at [sniffypedia.org](http://sniffypedia.org) as the [GitHub pages branch](https://github.com/reelyactive/sniffypedia/tree/gh-pages) of this same repository.
 
+For more information, visit [sniffypedia.org/about](http://sniffypedia.org/about).
+
+
+Installation
+------------
+
+    npm install sniffypedia
+
+
+Hello Sniffypedia
+-----------------
+
+```javascript
+var sniffypedia = require('sniffypedia');
+
+console.log(sniffypedia.index);
+```
 
 License
 -------

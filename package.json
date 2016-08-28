@@ -1,0 +1,31 @@
+{
+  "name": "sniffypedia",
+  "homepage": "https://github.com/reelyactive/sniffypedia/",
+  "author": "reelyActive <webdev@reelyactive.com>",
+  "description": "An open, collaborative lookup of radio-identifiable (sniffable) things, represented as structured data.  We believe in an open Internet of Things.",
+  "keywords": [
+    "reelyActive",
+    "IoT",
+    "Auto-ID",
+    "identification",
+    "associations"
+  ],
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/reelyactive/sniffypedia.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "bugs": {
+    "url": "https://github.com/reelyactive/sniffypedia/issues"
+  },
+  "contributors": [
+    { "name": "Jeffrey Dungen" }
+  ],
+  "license": "ODbL"
+}
