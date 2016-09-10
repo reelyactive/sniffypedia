@@ -52,6 +52,7 @@ var ble_iBeacons = {
   "3d4f13b4d1fd404980e5d3edcc840b69": "Product/Orange_Beacon",
   "8deefbb9f7384297804096668bb44281": "Product/Roximity_Beacon",
   "b9407f30f5f8466eaff925556b57fe6d": "Product/Estimote_Beacon",
+  "d0d3fa86ca7645ec9bd96af4927d7be1": "Product/Estimote_Beacon",
   "dab59c4fa4d6ee286bfe8e0000bbc2bb": "Product/Cocoanut-Manor_eNote",
   "e2c56db5dffb48d2b060d0f5a71096e0": "Product/Bright_Beacon",
   "f0018b9b75094c31a9051a27d39c003c": "Product/Locoslab_Beacon",
