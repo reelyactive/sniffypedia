@@ -16,7 +16,7 @@ SNIFFYPEDIA_STORY = {
       "@id": "product",
       "@type": "schema:Product",
       "schema:name": "Sniffypedia",
-      "schema:image": "http://sniffypedia.org/images/working-logo.png"
+      "schema:image": "https://sniffypedia.org/images/working-logo.png"
     }
   ]
 };
