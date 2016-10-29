@@ -13,6 +13,8 @@ var ble_uuid16 = {
   "feed": "Product/Tile_Tile",
   "febe": "Organization/Bose_Corporation",
   "feb2": "Organization/Microsoft",
+  "feb0": "Organization/Nest_Labs",
+  "feaf": "Organization/Nest_Labs",
   "feaa": "Product/Google_Eddystone",
   "fe9a": "Organization/Estimote_Inc"
 };
