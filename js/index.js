@@ -16,6 +16,8 @@ var ble_uuid16 = {
   "fef9": "Organization/PayPal_Inc/",
   "fef4": "Organization/Google/",
   "fef3": "Organization/Google/",
+  "feef": "Organization/Polar_Electro_Oy/",
+  "feee": "Organization/Polar_Electro_Oy/",
   "feed": "Product/Tile_Tile/",
   "febe": "Organization/Bose_Corporation/",
   "feb2": "Organization/Microsoft/",
