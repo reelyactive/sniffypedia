@@ -46,6 +46,8 @@ var ble_uuid16 = {
   "fec8": "Organization/Apple_Inc/",
   "fec7": "Organization/Apple_Inc/",
   "feba": "Organization/Tencent_Holdings_Limited/",
+  "feb8": "Organization/Facebook_Inc/",
+  "feb7": "Organization/Facebook_Inc/",
   "fea0": "Organization/Google/",
   "fe9f": "Organization/Google/",
   "fe9a": "Organization/Estimote_Inc/",
