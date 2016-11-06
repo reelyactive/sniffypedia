@@ -10,6 +10,8 @@
 // Bluetooth Low Energy 16-bit UUIDs
 // See: https://www.bluetooth.com/specifications/assigned-numbers/16-bit-uuids-for-members
 var ble_uuid16 = {
+  "fefd": "Organization/Gimbal_Inc/",
+  "fefc": "Organization/Gimbal_Inc/",
   "fefa": "Organization/PayPal_Inc/",
   "fef9": "Organization/PayPal_Inc/",
   "fef4": "Organization/Google/",
