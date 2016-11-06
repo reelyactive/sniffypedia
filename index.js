@@ -10,13 +10,53 @@
 // Bluetooth Low Energy 16-bit UUIDs
 // See: https://www.bluetooth.com/specifications/assigned-numbers/16-bit-uuids-for-members
 var ble_uuid16 = {
+  "fefd": "Organization/Gimbal_Inc/",
+  "fefc": "Organization/Gimbal_Inc/",
+  "fefa": "Organization/PayPal_Inc/",
+  "fef9": "Organization/PayPal_Inc/",
+  "fef4": "Organization/Google/",
+  "fef3": "Organization/Google/",
+  "feef": "Organization/Polar_Electro_Oy/",
+  "feee": "Organization/Polar_Electro_Oy/",
   "feed": "Product/Tile_Tile/",
+  "feeb": "Organization/Swirl_Networks_Inc/",
+  "feea": "Organization/Swirl_Networks_Inc/",
+  "fee7": "Organization/Tencent_Holdings_Limited/",
+  "fee6": "Organization/Seed_Labs_Inc/",
+  "fedd": "Organization/Jawbone/",
+  "fedc": "Organization/Jawbone/",
+  "fed9": "Organization/Pebble_Technology_Corporation/",
+  "fed4": "Organization/Apple_Inc/",
+  "fed3": "Organization/Apple_Inc/",
+  "fed2": "Organization/Apple_Inc/",
+  "fed1": "Organization/Apple_Inc/",
+  "fed0": "Organization/Apple_Inc/",
+  "fecf": "Organization/Apple_Inc/",
+  "fece": "Organization/Apple_Inc/",
+  "fecd": "Organization/Apple_Inc/",
+  "fecc": "Organization/Apple_Inc/",
+  "fecb": "Organization/Apple_Inc/",
+  "feca": "Organization/Apple_Inc/",
+  "fec9": "Organization/Apple_Inc/",
+  "fec8": "Organization/Apple_Inc/",
+  "fec7": "Organization/Apple_Inc/",
   "febe": "Organization/Bose_Corporation/",
+  "feba": "Organization/Tencent_Holdings_Limited/",
+  "feb8": "Organization/Facebook_Inc/",
+  "feb7": "Organization/Facebook_Inc/",
   "feb2": "Organization/Microsoft/",
   "feb0": "Organization/Nest_Labs/",
   "feaf": "Organization/Nest_Labs/",
   "feaa": "Product/Google_Eddystone/",
-  "fe9a": "Organization/Estimote_Inc/"
+  "fea0": "Organization/Google/",
+  "fe9f": "Organization/Google/",
+  "fe9a": "Organization/Estimote_Inc/",
+  "fe95": "Organization/Xiaomi/",
+  "fe8b": "Organization/Apple_Inc/",
+  "fe8a": "Organization/Apple_Inc/",
+  "fe56": "Organization/Google/",
+  "fe55": "Organization/Google/",
+  "fe50": "Organization/Google/"
 };
 
 
@@ -37,14 +77,26 @@ var ble_uuid128 = {
 // Bluetooth Low Energy company identifiers
 // See:https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers
 var ble_companyIdentifiers = {
+  "0006": "Organization/Microsoft/",
   "004c": "Organization/Apple_Inc/",
+  "006b": "Organization/Polar_Electro_Oy/",
   "0075": "Organization/Samsung/",
   "0087": "Organization/Garmin_International/",
+  "008a": "Organization/Jawbone/",
   "008c": "Organization/Gimbal_Inc/",
+  "009e": "Organization/Bose_Corporation/",
+  "00b5": "Organization/Swirl_Networks_Inc/",
   "00df": "Organization/Misfit_Inc/",
+  "00e0": "Organization/Google/",
+  "00f0": "Organization/PayPal_Inc/",
   "0131": "Organization/Cypress_Semiconductor_Corporation/",
+  "0136": "Organization/Seed_Labs_Inc/",
+  "013a": "Organization/Tencent_Holdings_Limited/",
+  "0154": "Organization/Pebble_Technology_Corporation/",
   "0157": "Organization/Xiaomi/",
-  "015d": "Organization/Estimote_Inc/"
+  "015d": "Organization/Estimote_Inc/",
+  "01ab": "Organization/Facebook_Inc/",
+  "01b5": "Organization/Nest_Labs/"
 };
 
 
