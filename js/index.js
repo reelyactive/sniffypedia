@@ -21,6 +21,7 @@ var ble_uuid16 = {
   "feed": "Product/Tile_Tile/",
   "feeb": "Organization/Swirl_Networks_Inc/",
   "feea": "Organization/Swirl_Networks_Inc/",
+  "fed9": "Organization/Pebble_Technology_Corporation/",
   "febe": "Organization/Bose_Corporation/",
   "feb2": "Organization/Microsoft/",
   "feb0": "Organization/Nest_Labs/",
