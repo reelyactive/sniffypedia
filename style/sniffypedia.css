@@ -18,6 +18,23 @@ body {
   padding: 60px;
 }
 
+/* Begin Bootstrap 3 buttons override */
+.btn-primary {
+  background: #0770a2;
+  border-color: #06628e;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+  background: #06628e;
+  border-color: #0770a2;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+  background: #0770a2;
+  border-color: #06628e;
+}
+/* End Bootstrap 3 buttons override */
+
 .footer {
   position: absolute;
   bottom: 0;
