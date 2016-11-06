@@ -27,6 +27,7 @@ var ble_uuid16 = {
   "feb0": "Organization/Nest_Labs/",
   "feaf": "Organization/Nest_Labs/",
   "feaa": "Product/Google_Eddystone/",
+  "fee7": "Organization/Tencent_Holdings_Limited/",
   "fea0": "Organization/Google/",
   "fe9f": "Organization/Google/",
   "fe9a": "Organization/Estimote_Inc/",
