@@ -81,6 +81,7 @@ var ble_companyIdentifiers = {
   "004c": "Organization/Apple_Inc/",
   "006b": "Organization/Polar_Electro_Oy/",
   "0075": "Organization/Samsung/",
+  "0078": "Organization/Nike_Inc/",
   "0087": "Organization/Garmin_International/",
   "008a": "Organization/Jawbone/",
   "008c": "Organization/Gimbal_Inc/",
