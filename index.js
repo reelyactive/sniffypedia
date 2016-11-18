@@ -94,6 +94,7 @@ var ble_companyIdentifiers = {
   "0131": "Organization/Cypress_Semiconductor_Corporation/",
   "0136": "Organization/Seed_Labs_Inc/",
   "013a": "Organization/Tencent_Holdings_Limited/",
+  "0147": "Organization/Mighty_Cast_Inc/",
   "0154": "Organization/Pebble_Technology_Corporation/",
   "0157": "Organization/Xiaomi/",
   "015d": "Organization/Estimote_Inc/",
