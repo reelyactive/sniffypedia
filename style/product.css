@@ -7,6 +7,16 @@ body {
   padding: 60px;
 }
 
+.btn-info {
+  background: #82d9f7;
+  border-color: #72bed8;
+}
+
+.btn-info:hover, .btn-info:focus, .btn-info:active, .btn-info.active, .open > .dropdown-toggle.btn-info {
+  background: #72bed8;
+  border-color: #82d9f7;
+}
+
 .product-default {
   width: 100vw;
   height: 100vh;
