@@ -34,8 +34,24 @@
     </script>
   </head>
   <body ng-app="visualisation">
-    <div ng-controller="BubbleCtrl" class="bubble-container">
-      <bubble ng-if="story" json="story" size="240px" toggle="false"></bubble>
+    <div ng-controller="BubbleCtrl" class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 bubble-container">
+          <bubble ng-if="story" json="story" size="240px" toggle="false">
+          </bubble>
+        </div>
+        <div class="col-md-6">
+          <br>
+          <pre uib-tooltip="Machine-readable Schema.org & JSON-LD"
+               tooltip-placement="bottom-right">{{storyString}}</pre>
+          <p class="text-center">
+            <a href="../../" class="btn btn-info btn-sm"> Sniffypedia </a>
+            <a href="../../about/" class="btn btn-default btn-sm"> About </a>
+            <a href="../../contribute/"
+               class="btn btn-default btn-sm"> Contribute </a>
+          </p>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> &nbsp; This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
