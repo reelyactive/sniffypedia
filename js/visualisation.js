@@ -22,5 +22,6 @@ angular.module('visualisation', [ 'reelyactive.cormorant',
 
   cormorant.getStory(url, function(story, url) {
     $scope.story = story;
+    $scope.storyString = JSON.stringify(story, null, 2);
   });
 });
