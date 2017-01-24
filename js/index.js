@@ -91,6 +91,7 @@ var ble_companyIdentifiers = {
   "00df": "Organization/Misfit_Inc/",
   "00e0": "Organization/Google/",
   "00f0": "Organization/PayPal_Inc/",
+  "012d": "Organization/Sony_Corporation/",
   "0131": "Organization/Cypress_Semiconductor_Corporation/",
   "0136": "Organization/Seed_Labs_Inc/",
   "013a": "Organization/Tencent_Holdings_Limited/",
