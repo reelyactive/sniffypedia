@@ -111,6 +111,7 @@ var ble_iBeacons = {
   "07775dd0111b11e491910800200c9a66": "Product/XY-Findables_Beacon/",
   "2f234454cf6d4a0fadf2f4911ba9ffa6": "Product/Radius-Networks_Beacon/",
   "3d4f13b4d1fd404980e5d3edcc840b69": "Product/Orange_Beacon/",
+  "74278bdab64445208f0c720eaf059935": "Product/Minew_Beacon/",
   "8deefbb9f7384297804096668bb44281": "Product/Roximity_Beacon/",
   "b9407f30f5f8466eaff925556b57fe6d": "Product/Estimote_Beacon/",
   "d0d3fa86ca7645ec9bd96af4927d7be1": "Product/Estimote_Beacon/",
