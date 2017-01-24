@@ -99,6 +99,7 @@ var ble_companyIdentifiers = {
   "0154": "Organization/Pebble_Technology_Corporation/",
   "0157": "Organization/Xiaomi/",
   "015d": "Organization/Estimote_Inc/",
+  "0195": "Organization/Zuli_Inc/",
   "01ab": "Organization/Facebook_Inc/",
   "01b5": "Organization/Nest_Labs/"
 };
