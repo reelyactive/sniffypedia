@@ -91,6 +91,7 @@ var ble_companyIdentifiers = {
   "00df": "Organization/Misfit_Inc/",
   "00e0": "Organization/Google/",
   "00f0": "Organization/PayPal_Inc/",
+  "012d": "Organization/Sony_Corporation/",
   "0131": "Organization/Cypress_Semiconductor_Corporation/",
   "0136": "Organization/Seed_Labs_Inc/",
   "013a": "Organization/Tencent_Holdings_Limited/",
@@ -98,8 +99,10 @@ var ble_companyIdentifiers = {
   "0154": "Organization/Pebble_Technology_Corporation/",
   "0157": "Organization/Xiaomi/",
   "015d": "Organization/Estimote_Inc/",
+  "0195": "Organization/Zuli_Inc/",
   "01ab": "Organization/Facebook_Inc/",
-  "01b5": "Organization/Nest_Labs/"
+  "01b5": "Organization/Nest_Labs/",
+  "0399": "Organization/Nikon_Corporation/"
 };
 
 
@@ -108,6 +111,7 @@ var ble_iBeacons = {
   "07775dd0111b11e491910800200c9a66": "Product/XY-Findables_Beacon/",
   "2f234454cf6d4a0fadf2f4911ba9ffa6": "Product/Radius-Networks_Beacon/",
   "3d4f13b4d1fd404980e5d3edcc840b69": "Product/Orange_Beacon/",
+  "74278bdab64445208f0c720eaf059935": "Product/Minew_Beacon/",
   "8deefbb9f7384297804096668bb44281": "Product/Roximity_Beacon/",
   "b9407f30f5f8466eaff925556b57fe6d": "Product/Estimote_Beacon/",
   "d0d3fa86ca7645ec9bd96af4927d7be1": "Product/Estimote_Beacon/",
