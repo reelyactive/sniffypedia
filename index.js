@@ -23,6 +23,8 @@ var ble_uuid16 = {
   "feea": "Organization/Swirl_Networks_Inc/",
   "fee7": "Organization/Tencent_Holdings_Limited/",
   "fee6": "Organization/Seed_Labs_Inc/",
+  "fee5": "Organization/Nordic_Semiconductor_ASA/",
+  "fee4": "Organization/Nordic_Semiconductor_ASA/",
   "fedd": "Organization/Jawbone/",
   "fedc": "Organization/Jawbone/",
   "fed9": "Organization/Pebble_Technology_Corporation/",
@@ -42,6 +44,7 @@ var ble_uuid16 = {
   "fec7": "Organization/Apple_Inc/",
   "febe": "Organization/Bose_Corporation/",
   "feba": "Organization/Tencent_Holdings_Limited/",
+  "feb9": "Organization/LG_Electronics/",
   "feb8": "Organization/Facebook_Inc/",
   "feb7": "Organization/Facebook_Inc/",
   "feb2": "Organization/Microsoft/",
@@ -54,6 +57,8 @@ var ble_uuid16 = {
   "fe95": "Organization/Xiaomi/",
   "fe8b": "Organization/Apple_Inc/",
   "fe8a": "Organization/Apple_Inc/",
+  "fe59": "Organization/Nordic_Semiconductor_ASA/",
+  "fe58": "Organization/Nordic_Semiconductor_ASA/",
   "fe56": "Organization/Google/",
   "fe55": "Organization/Google/",
   "fe50": "Organization/Google/"
@@ -64,6 +69,7 @@ var ble_uuid16 = {
 var ble_uuid128 = {
   "adabfb006e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
   "52052c11e701478299f58ce88dbb1500": "Product/Allegion_ENGAGE/",
+  "6e400001b5a3f393e0a9e50e24dcca9e": "Organization/Nordic_Semiconductor_ASA/",
   "7265656c794163746976652055554944": "Product/reelyActive_RA-R436/",
   "7265656c7941707020416e64726f6964": "Product/reelyActive_reelyApp-Android/",
   "7265656c7941707020666f7220694f53": "Product/reelyActive_reelyApp-iOS/",
@@ -87,6 +93,7 @@ var ble_companyIdentifiers = {
   "008c": "Organization/Gimbal_Inc/",
   "009e": "Organization/Bose_Corporation/",
   "00b5": "Organization/Swirl_Networks_Inc/",
+  "00c4": "Organization/LG_Electronics/",
   "00cc": "Organization/Beats_Electronics/",
   "00df": "Organization/Misfit_Inc/",
   "00e0": "Organization/Google/",
@@ -102,6 +109,7 @@ var ble_companyIdentifiers = {
   "0195": "Organization/Zuli_Inc/",
   "01ab": "Organization/Facebook_Inc/",
   "01b5": "Organization/Nest_Labs/",
+  "0211": "Organization/Telink_Semiconductor_Co_Ltd/",
   "0399": "Organization/Nikon_Corporation/"
 };
 
