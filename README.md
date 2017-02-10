@@ -1,9 +1,9 @@
 Sniffypedia
 ===========
 
-This is the index to Sniffypedia, which is hosted at [sniffypedia.org](http://sniffypedia.org) as the [GitHub pages branch](https://github.com/reelyactive/sniffypedia/tree/gh-pages) of this same repository.
+This is the index to Sniffypedia, which is hosted at [sniffypedia.org](https://sniffypedia.org) as the [GitHub pages branch](https://github.com/reelyactive/sniffypedia/tree/gh-pages) of this same repository.
 
-For more information, visit [sniffypedia.org/about](http://sniffypedia.org/about).
+For more information, visit [sniffypedia.org/about](https://sniffypedia.org/about).
 
 
 Installation
