@@ -110,6 +110,7 @@ var ble_companyIdentifiers = {
   "0195": "Organization/Zuli_Inc/",
   "01ab": "Organization/Facebook_Inc/",
   "01b5": "Organization/Nest_Labs/",
+  "01d1": "Organization/August_Home_Inc/",
   "0211": "Organization/Telink_Semiconductor_Co_Ltd/",
   "0399": "Organization/Nikon_Corporation/"
 };
