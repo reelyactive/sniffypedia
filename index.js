@@ -61,7 +61,8 @@ var ble_uuid16 = {
   "fe58": "Organization/Nordic_Semiconductor_ASA/",
   "fe56": "Organization/Google/",
   "fe55": "Organization/Google/",
-  "fe50": "Organization/Google/"
+  "fe50": "Organization/Google/",
+  "fe2c": "Organization/Google/"
 };
 
 
@@ -106,9 +107,11 @@ var ble_companyIdentifiers = {
   "0154": "Organization/Pebble_Technology_Corporation/",
   "0157": "Organization/Xiaomi/",
   "015d": "Organization/Estimote_Inc/",
+  "0180": "Organization/Gigaset_Communications_GmbH/",
   "0195": "Organization/Zuli_Inc/",
   "01ab": "Organization/Facebook_Inc/",
   "01b5": "Organization/Nest_Labs/",
+  "01d1": "Organization/August_Home_Inc/",
   "0211": "Organization/Telink_Semiconductor_Co_Ltd/",
   "0399": "Organization/Nikon_Corporation/"
 };
