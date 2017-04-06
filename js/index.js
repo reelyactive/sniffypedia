@@ -68,7 +68,8 @@ var ble_uuid16 = {
   "fe55": "Organization/Google/",
   "fe50": "Organization/Google/",
   "fe33": "Organization/CHIPOLO/",
-  "fe2c": "Organization/Google/"
+  "fe2c": "Organization/Google/",
+  "fe27": "Organization/Google/"
 };
 
 
