@@ -19,6 +19,7 @@ var ble_uuid16 = {
   "fef6": "Organization/Wicentric_Inc/",
   "fef4": "Organization/Google/",
   "fef3": "Organization/Google/",
+  "fef2": "Organization/CSR/",
   "fef1": "Organization/CSR/",
   "feef": "Organization/Polar_Electro_Oy/",
   "feee": "Organization/Polar_Electro_Oy/",
@@ -59,6 +60,7 @@ var ble_uuid16 = {
   "fe9f": "Product/Google_Chromecast/",
   "fe9a": "Organization/Estimote_Inc/",
   "fe95": "Organization/Xiaomi/",
+  "fe8f": "Organization/CSR/",
   "fe8b": "Organization/Apple_Inc/",
   "fe8a": "Organization/Apple_Inc/",
   "fe65": "Organization/CHIPOLO/",
@@ -96,6 +98,7 @@ var ble_uuid128 = {
 var ble_companyIdentifiers = {
   "0004": "Organization/Toshiba_Corporation/",
   "0006": "Organization/Microsoft/",
+  "000a": "Organization/CSR/",
   "004c": "Organization/Apple_Inc/",
   "005f": "Organization/Wicentric_Inc/",
   "006b": "Organization/Polar_Electro_Oy/",
