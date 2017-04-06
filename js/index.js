@@ -70,6 +70,9 @@ var ble_uuid16 = {
 
 // Bluetooth Low Energy 128-bit UUIDs
 var ble_uuid128 = {
+  "adab0bd16e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
+  "adab0cf56e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
+  "adab71766e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
   "adabfb006e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
   "52052c11e701478299f58ce88dbb1500": "Product/Allegion_ENGAGE/",
   "6e400001b5a3f393e0a9e50e24dcca9e": "Organization/Nordic_Semiconductor_ASA/",
