@@ -88,6 +88,7 @@ var ble_uuid128 = {
 var ble_companyIdentifiers = {
   "0006": "Organization/Microsoft/",
   "004c": "Organization/Apple_Inc/",
+  "005f": "Organization/Wicentric_Inc/",
   "006b": "Organization/Polar_Electro_Oy/",
   "0075": "Organization/Samsung/",
   "0078": "Organization/Nike_Inc/",
