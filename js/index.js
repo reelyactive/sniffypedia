@@ -89,6 +89,7 @@ var ble_uuid128 = {
 // Bluetooth Low Energy company identifiers
 // See:https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers
 var ble_companyIdentifiers = {
+  "0004": "Organization/Toshiba_Corporation/",
   "0006": "Organization/Microsoft/",
   "004c": "Organization/Apple_Inc/",
   "005f": "Organization/Wicentric_Inc/",
