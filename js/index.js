@@ -16,6 +16,7 @@ var ble_uuid16 = {
   "fef9": "Organization/PayPal_Inc/",
   "fef8": "Organization/Aplix_Corporation/",
   "fef7": "Organization/Aplix_Corporation/",
+  "fef6": "Organization/Wicentric_Inc/",
   "fef4": "Organization/Google/",
   "fef3": "Organization/Google/",
   "fef1": "Organization/CSR/",
