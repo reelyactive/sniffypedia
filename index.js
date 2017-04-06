@@ -14,8 +14,13 @@ var ble_uuid16 = {
   "fefc": "Organization/Gimbal_Inc/",
   "fefa": "Organization/PayPal_Inc/",
   "fef9": "Organization/PayPal_Inc/",
+  "fef8": "Organization/Aplix_Corporation/",
+  "fef7": "Organization/Aplix_Corporation/",
+  "fef6": "Organization/Wicentric_Inc/",
   "fef4": "Organization/Google/",
   "fef3": "Organization/Google/",
+  "fef2": "Organization/CSR/",
+  "fef1": "Organization/CSR/",
   "feef": "Organization/Polar_Electro_Oy/",
   "feee": "Organization/Polar_Electro_Oy/",
   "feed": "Product/Tile_Tile/",
@@ -55,19 +60,26 @@ var ble_uuid16 = {
   "fe9f": "Product/Google_Chromecast/",
   "fe9a": "Organization/Estimote_Inc/",
   "fe95": "Organization/Xiaomi/",
+  "fe8f": "Organization/CSR/",
   "fe8b": "Organization/Apple_Inc/",
   "fe8a": "Organization/Apple_Inc/",
+  "fe65": "Organization/CHIPOLO/",
   "fe59": "Organization/Nordic_Semiconductor_ASA/",
   "fe58": "Organization/Nordic_Semiconductor_ASA/",
   "fe56": "Organization/Google/",
   "fe55": "Organization/Google/",
   "fe50": "Organization/Google/",
-  "fe2c": "Organization/Google/"
+  "fe33": "Organization/CHIPOLO/",
+  "fe2c": "Organization/Google/",
+  "fe27": "Organization/Google/"
 };
 
 
 // Bluetooth Low Energy 128-bit UUIDs
 var ble_uuid128 = {
+  "adab0bd16e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
+  "adab0cf56e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
+  "adab71766e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
   "adabfb006e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
   "52052c11e701478299f58ce88dbb1500": "Product/Allegion_ENGAGE/",
   "6e400001b5a3f393e0a9e50e24dcca9e": "Organization/Nordic_Semiconductor_ASA/",
@@ -84,8 +96,11 @@ var ble_uuid128 = {
 // Bluetooth Low Energy company identifiers
 // See:https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers
 var ble_companyIdentifiers = {
+  "0004": "Organization/Toshiba_Corporation/",
   "0006": "Organization/Microsoft/",
+  "000a": "Organization/CSR/",
   "004c": "Organization/Apple_Inc/",
+  "005f": "Organization/Wicentric_Inc/",
   "006b": "Organization/Polar_Electro_Oy/",
   "0075": "Organization/Samsung/",
   "0078": "Organization/Nike_Inc/",
@@ -94,8 +109,10 @@ var ble_companyIdentifiers = {
   "008c": "Organization/Gimbal_Inc/",
   "009e": "Organization/Bose_Corporation/",
   "00b5": "Organization/Swirl_Networks_Inc/",
+  "00bd": "Organization/Aplix_Corporation/",
   "00c4": "Organization/LG_Electronics/",
   "00cc": "Organization/Beats_Electronics/",
+  "00cd": "Organization/Microchip_Technology_Inc/",
   "00df": "Organization/Misfit_Inc/",
   "00e0": "Organization/Google/",
   "00f0": "Organization/PayPal_Inc/",
@@ -107,6 +124,7 @@ var ble_companyIdentifiers = {
   "0154": "Organization/Pebble_Technology_Corporation/",
   "0157": "Organization/Xiaomi/",
   "015d": "Organization/Estimote_Inc/",
+  "015e": "Organization/UniKey_Technologies_Inc/",
   "0180": "Organization/Gigaset_Communications_GmbH/",
   "0195": "Organization/Zuli_Inc/",
   "01ab": "Organization/Facebook_Inc/",
@@ -123,6 +141,7 @@ var ble_iBeacons = {
   "0d60a2892039442198216b12c4274890": "Product/Bluetooth_World_2017_Beacon/",
   "2f234454cf6d4a0fadf2f4911ba9ffa6": "Product/Radius-Networks_Beacon/",
   "3d4f13b4d1fd404980e5d3edcc840b69": "Product/Orange_Beacon/",
+  "7265656c794163746976652055554944": "Product/reelyActive_RA-R436/",
   "74278bdab64445208f0c720eaf059935": "Product/Minew_Beacon/",
   "8deefbb9f7384297804096668bb44281": "Product/Roximity_Beacon/",
   "b9407f30f5f8466eaff925556b57fe6d": "Product/Estimote_Beacon/",
