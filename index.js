@@ -64,6 +64,7 @@ var ble_uuid16 = {
   "fe8b": "Organization/Apple_Inc/",
   "fe8a": "Organization/Apple_Inc/",
   "fe65": "Organization/CHIPOLO/",
+  "fe61": "Organization/Logitech_International_SA/",
   "fe59": "Organization/Nordic_Semiconductor_ASA/",
   "fe58": "Organization/Nordic_Semiconductor_ASA/",
   "fe56": "Organization/Google/",
@@ -130,7 +131,9 @@ var ble_companyIdentifiers = {
   "01ab": "Organization/Facebook_Inc/",
   "01b5": "Organization/Nest_Labs/",
   "01d1": "Organization/August_Home_Inc/",
+  "01da": "Organization/Logitech_International_SA/",
   "0211": "Organization/Telink_Semiconductor_Co_Ltd/",
+  "02b2": "Product/OURA_Ring/",
   "03c2": "Organization/Snapchat_Inc/",
   "0399": "Organization/Nikon_Corporation/",
   "0499": "Organization/Ruuvi_Innovations_Ltd/"
