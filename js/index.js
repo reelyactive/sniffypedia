@@ -104,6 +104,7 @@ var ble_companyIdentifiers = {
   "0006": "Organization/Microsoft/",
   "000a": "Organization/CSR/",
   "004c": "Organization/Apple_Inc/",
+  "0059": "Organization/Nordic_Semiconductor_ASA/",
   "005f": "Organization/Wicentric_Inc/",
   "006b": "Organization/Polar_Electro_Oy/",
   "0075": "Organization/Samsung/",
