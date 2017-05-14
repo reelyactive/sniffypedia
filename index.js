@@ -47,6 +47,7 @@ var ble_uuid16 = {
   "fec9": "Organization/Apple_Inc/",
   "fec8": "Organization/Apple_Inc/",
   "fec7": "Organization/Apple_Inc/",
+  "fec4": "Organization/PLUS_Location_Systems/",
   "febe": "Organization/Bose_Corporation/",
   "feba": "Organization/Tencent_Holdings_Limited/",
   "feb9": "Organization/LG_Electronics/",
@@ -56,6 +57,8 @@ var ble_uuid16 = {
   "feb0": "Organization/Nest_Labs/",
   "feaf": "Organization/Nest_Labs/",
   "feaa": "Product/Google_Eddystone/",
+  "fea6": "Organization/GoPro_Inc/",
+  "fea5": "Organization/GoPro_Inc/",
   "fea0": "Product/Google_Chromecast/",
   "fe9f": "Product/Google_Chromecast/",
   "fe9a": "Organization/Estimote_Inc/",
@@ -72,7 +75,10 @@ var ble_uuid16 = {
   "fe50": "Organization/Google/",
   "fe33": "Organization/CHIPOLO/",
   "fe2c": "Organization/Google/",
-  "fe27": "Organization/Google/"
+  "fe27": "Organization/Google/",
+  "fe26": "Organization/Google/",
+  "fe25": "Organization/Apple_Inc/",
+  "fe24": "Organization/August_Home_Inc/"
 };
 
 
@@ -101,6 +107,7 @@ var ble_companyIdentifiers = {
   "0006": "Organization/Microsoft/",
   "000a": "Organization/CSR/",
   "004c": "Organization/Apple_Inc/",
+  "0059": "Organization/Nordic_Semiconductor_ASA/",
   "005f": "Organization/Wicentric_Inc/",
   "006b": "Organization/Polar_Electro_Oy/",
   "0075": "Organization/Samsung/",
@@ -112,11 +119,13 @@ var ble_companyIdentifiers = {
   "00b5": "Organization/Swirl_Networks_Inc/",
   "00bd": "Organization/Aplix_Corporation/",
   "00c4": "Organization/LG_Electronics/",
+  "00c7": "Organization/Quuppa_Oy/",
   "00cc": "Organization/Beats_Electronics/",
   "00cd": "Organization/Microchip_Technology_Inc/",
   "00df": "Organization/Misfit_Inc/",
   "00e0": "Organization/Google/",
   "00f0": "Organization/PayPal_Inc/",
+  "0104": "Organization/PLUS_Location_Systems/",
   "012d": "Organization/Sony_Corporation/",
   "0131": "Organization/Cypress_Semiconductor_Corporation/",
   "0136": "Organization/Seed_Labs_Inc/",
@@ -134,6 +143,8 @@ var ble_companyIdentifiers = {
   "01da": "Organization/Logitech_International_SA/",
   "0211": "Organization/Telink_Semiconductor_Co_Ltd/",
   "02b2": "Product/OURA_Ring/",
+  "02d3": "Organization/Powercast_Corporation/",
+  "02f2": "Organization/GoPro_Inc/",
   "03c2": "Organization/Snapchat_Inc/",
   "0399": "Organization/Nikon_Corporation/",
   "0499": "Organization/Ruuvi_Innovations_Ltd/"
