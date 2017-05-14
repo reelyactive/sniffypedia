@@ -114,6 +114,7 @@ var ble_companyIdentifiers = {
   "00b5": "Organization/Swirl_Networks_Inc/",
   "00bd": "Organization/Aplix_Corporation/",
   "00c4": "Organization/LG_Electronics/",
+  "00c7": "Organization/Quuppa_Oy/",
   "00cc": "Organization/Beats_Electronics/",
   "00cd": "Organization/Microchip_Technology_Inc/",
   "00df": "Organization/Misfit_Inc/",
