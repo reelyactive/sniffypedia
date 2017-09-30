@@ -78,7 +78,12 @@ var ble_uuid16 = {
   "fe27": "Organization/Google/",
   "fe26": "Organization/Google/",
   "fe25": "Organization/Apple_Inc/",
-  "fe24": "Organization/August_Home_Inc/"
+  "fe24": "Organization/August_Home_Inc/",
+  "fe21": "Organization/Bose_Corporation/",
+  "fe1f": "Organization/Garmin_International/",
+  "fe19": "Organization/Google/",
+  "fe13": "Organization/Apple_Inc/",
+  "fe08": "Organization/Microsoft/"
 };
 
 
@@ -157,6 +162,7 @@ var ble_iBeacons = {
   "0d60a2892039442198216b12c4274890": "Product/Bluetooth_World_2017_Beacon/",
   "2f234454cf6d4a0fadf2f4911ba9ffa6": "Product/Radius-Networks_Beacon/",
   "3d4f13b4d1fd404980e5d3edcc840b69": "Product/Orange_Beacon/",
+  "61687109905f443691f8e602f514c96d": "Product/BlueCats_Beacon/",
   "7265656c794163746976652055554944": "Product/reelyActive_RA-R436/",
   "74278bdab64445208f0c720eaf059935": "Product/Minew_Beacon/",
   "8deefbb9f7384297804096668bb44281": "Product/Roximity_Beacon/",
