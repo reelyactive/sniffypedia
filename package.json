@@ -5,6 +5,7 @@
   "description": "An open, collaborative lookup of radio-identifiable (sniffable) things, represented as structured data.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
+    "BLE",
     "IoT",
     "Auto-ID",
     "identification",
@@ -12,7 +13,7 @@
     "linked data",
     "semantic web"
   ],
-  "version": "0.1.15",
+  "version": "0.1.16",
   "engines": {
     "node": ">=0.10.0"
   },
