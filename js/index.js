@@ -157,7 +157,8 @@ var ble_companyIdentifiers = {
   "02f2": "Organization/GoPro_Inc/",
   "03c2": "Organization/Snapchat_Inc/",
   "0399": "Organization/Nikon_Corporation/",
-  "0499": "Organization/Ruuvi_Innovations_Ltd/"
+  "0499": "Organization/Ruuvi_Innovations_Ltd/",
+  "0583": "Organization/Code_Blue_Communications_Inc/"
 };
 
 
