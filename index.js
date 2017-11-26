@@ -17,6 +17,7 @@ var ble_uuid16 = {
   "fef8": "Organization/Aplix_Corporation/",
   "fef7": "Organization/Aplix_Corporation/",
   "fef6": "Organization/Wicentric_Inc/",
+  "fef5": "Organization/Dialog_Semiconductor_BV/",
   "fef4": "Organization/Google/",
   "fef3": "Organization/Google/",
   "fef2": "Organization/CSR/",
@@ -61,6 +62,7 @@ var ble_uuid16 = {
   "fea5": "Organization/GoPro_Inc/",
   "fea0": "Product/Google_Chromecast/",
   "fe9f": "Product/Google_Chromecast/",
+  "fe9e": "Organization/Dialog_Semiconductor_BV/",
   "fe9a": "Organization/Estimote_Inc/",
   "fe95": "Organization/Xiaomi/",
   "fe8f": "Organization/CSR/",
@@ -108,6 +110,7 @@ var ble_uuid128 = {
 // Bluetooth Low Energy company identifiers
 // See:https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers
 var ble_companyIdentifiers = {
+  "0003": "Organization/IBM_Corporation/",
   "0004": "Organization/Toshiba_Corporation/",
   "0006": "Organization/Microsoft/",
   "000a": "Organization/CSR/",
@@ -127,6 +130,7 @@ var ble_companyIdentifiers = {
   "00c7": "Organization/Quuppa_Oy/",
   "00cc": "Organization/Beats_Electronics/",
   "00cd": "Organization/Microchip_Technology_Inc/",
+  "00d2": "Organization/Dialog_Semiconductor_BV/",
   "00df": "Organization/Misfit_Inc/",
   "00e0": "Organization/Google/",
   "00f0": "Organization/PayPal_Inc/",
@@ -147,12 +151,15 @@ var ble_companyIdentifiers = {
   "01d1": "Organization/August_Home_Inc/",
   "01da": "Organization/Logitech_International_SA/",
   "0211": "Organization/Telink_Semiconductor_Co_Ltd/",
+  "0225": "Organization/Nestle_Nespresso_SA/",
   "02b2": "Product/OURA_Ring/",
   "02d3": "Organization/Powercast_Corporation/",
   "02f2": "Organization/GoPro_Inc/",
   "03c2": "Organization/Snapchat_Inc/",
   "0399": "Organization/Nikon_Corporation/",
-  "0499": "Organization/Ruuvi_Innovations_Ltd/"
+  "0499": "Organization/Ruuvi_Innovations_Ltd/",
+  "0528": "Organization/Lunera_Lighting_Inc/",
+  "0583": "Organization/Code_Blue_Communications_Inc/"
 };
 
 
