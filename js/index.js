@@ -161,7 +161,8 @@ var ble_companyIdentifiers = {
   "0399": "Organization/Nikon_Corporation/",
   "0499": "Organization/Ruuvi_Innovations_Ltd/",
   "0528": "Organization/Lunera_Inc/",
-  "0583": "Organization/Code_Blue_Communications_Inc/"
+  "0583": "Organization/Code_Blue_Communications_Inc/",
+  "0639": "Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 
 
