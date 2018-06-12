@@ -68,6 +68,7 @@ var ble_uuid16 = {
   "fe8f": "Organization/CSR/",
   "fe8b": "Organization/Apple_Inc/",
   "fe8a": "Organization/Apple_Inc/",
+  "fe86": "Organization/Huawei_Technologies_Co_Ltd/",
   "fe65": "Organization/CHIPOLO/",
   "fe61": "Organization/Logitech_International_SA/",
   "fe59": "Organization/Nordic_Semiconductor_ASA/",
@@ -75,6 +76,8 @@ var ble_uuid16 = {
   "fe56": "Organization/Google/",
   "fe55": "Organization/Google/",
   "fe50": "Organization/Google/",
+  "fe36": "Organization/Huawei_Technologies_Co_Ltd/",
+  "fe35": "Organization/Huawei_Technologies_Co_Ltd/",
   "fe33": "Organization/CHIPOLO/",
   "fe2c": "Organization/Google/",
   "fe27": "Organization/Google/",
@@ -87,6 +90,7 @@ var ble_uuid16 = {
   "fe13": "Organization/Apple_Inc/",
   "fe08": "Organization/Microsoft/",
   "fdf0": "Organization/Google/",
+  "fdee": "Organization/Huawei_Technologies_Co_Ltd/",
   "fde2": "Organization/Google/"
 };
 
@@ -154,6 +158,7 @@ var ble_companyIdentifiers = {
   "01da": "Organization/Logitech_International_SA/",
   "0211": "Organization/Telink_Semiconductor_Co_Ltd/",
   "0225": "Organization/Nestle_Nespresso_SA/",
+  "027d": "Organization/Huawei_Technologies_Co_Ltd/",
   "02b2": "Product/OURA_Ring/",
   "02d3": "Organization/Powercast_Corporation/",
   "02f2": "Organization/GoPro_Inc/",
