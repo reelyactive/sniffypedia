@@ -85,7 +85,9 @@ var ble_uuid16 = {
   "fe1f": "Organization/Garmin_International/",
   "fe19": "Organization/Google/",
   "fe13": "Organization/Apple_Inc/",
-  "fe08": "Organization/Microsoft/"
+  "fe08": "Organization/Microsoft/",
+  "fdf0": "Organization/Google/",
+  "fde2": "Organization/Google/"
 };
 
 
