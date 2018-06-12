@@ -1,5 +1,5 @@
 /**
- * Copyright reelyActive 2016
+ * Copyright reelyActive 2016-2018
  * We believe in an open Internet of Things
  */
 
@@ -10,11 +10,22 @@ TYPE_PERSON = 'Person';
 TYPE_PRODUCT = 'Product';
 TYPE_PLACE = 'Place';
 TYPE_ORGANIZATION = 'Organization';
+DEFAULT_ID = {};
+DEFAULT_ID[TYPE_PERSON] = 'person';
+DEFAULT_ID[TYPE_PRODUCT] = 'product';
+DEFAULT_ID[TYPE_PLACE] = 'place';
+DEFAULT_ID[TYPE_ORGANIZATION] = 'organization';
 DEFAULT_IMAGE = {};
 DEFAULT_IMAGE[TYPE_PERSON] = 'images/default-person.png';
 DEFAULT_IMAGE[TYPE_PRODUCT] = 'images/default-product.png';
 DEFAULT_IMAGE[TYPE_PLACE] = 'images/default-place.png';
+DEFAULT_IMAGE[TYPE_ORGANIZATION] = 'images/default-organization.png';
 DEFAULT_IMAGE_UNSUPPORTED = 'images/default-unsupported.png';
+DEFAULT_NAME = {};
+DEFAULT_NAME[TYPE_PERSON] = '???';
+DEFAULT_NAME[TYPE_PRODUCT] = '???';
+DEFAULT_NAME[TYPE_PLACE] = '???';
+DEFAULT_NAME[TYPE_ORGANIZATION] = '???';
 UNSUPPORTED_STORY_JSON = {
   "schema:name": "Unsupported Story",
   "schema:image": DEFAULT_IMAGE_UNSUPPORTED
@@ -71,8 +82,15 @@ angular.module('reelyactive.cuttlefish', [ 'ngAnimate', 'ui.bootstrap' ])
       }
 
       function formatItem(item, type) {
-        if(!item.hasOwnProperty("schema:image")) {
+        if(!item.hasOwnProperty("@id")) {
+          item["@id"] = DEFAULT_ID[type];
+        }
+        if(!item.hasOwnProperty("schema:image") &&
+           !item.hasOwnProperty("schema:logo")) {
           item["schema:image"] = DEFAULT_IMAGE[type];
+        }
+        if(!item.hasOwnProperty("schema:name")) {
+          item["schema:name"] = DEFAULT_NAME[type];
         }
         return item;
       }

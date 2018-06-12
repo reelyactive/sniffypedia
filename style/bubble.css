@@ -11,6 +11,7 @@
   background-clip: padding-box;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   border: solid rgba(255, 255, 255, 0.2);
   box-sizing: content-box;
   position: relative;
