@@ -64,4 +64,17 @@
 
   </div>
 
+  <!-- Service -->
+
+  <div class="bubble--photo" ng-if="service"
+       ng-show="current === 'Service'"
+       ng-style="{'background-image' : 'url(' + service['schema:logo'] + ')' }"
+       data-name="{{product['schema:name']}}" data-type="Service">
+    
+    <div class="bubble--label">
+      {{service["schema:name"]}}
+    </div>
+
+  </div>
+
 </div>

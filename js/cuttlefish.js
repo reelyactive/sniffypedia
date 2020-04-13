@@ -10,22 +10,26 @@ TYPE_PERSON = 'Person';
 TYPE_PRODUCT = 'Product';
 TYPE_PLACE = 'Place';
 TYPE_ORGANIZATION = 'Organization';
+TYPE_SERVICE = 'Service';
 DEFAULT_ID = {};
 DEFAULT_ID[TYPE_PERSON] = 'person';
 DEFAULT_ID[TYPE_PRODUCT] = 'product';
 DEFAULT_ID[TYPE_PLACE] = 'place';
 DEFAULT_ID[TYPE_ORGANIZATION] = 'organization';
+DEFAULT_ID[TYPE_SERVICE] = 'service';
 DEFAULT_IMAGE = {};
 DEFAULT_IMAGE[TYPE_PERSON] = 'images/default-person.png';
 DEFAULT_IMAGE[TYPE_PRODUCT] = 'images/default-product.png';
 DEFAULT_IMAGE[TYPE_PLACE] = 'images/default-place.png';
 DEFAULT_IMAGE[TYPE_ORGANIZATION] = 'images/default-organization.png';
+DEFAULT_IMAGE[TYPE_SERVICE] = 'images/default-service.png';
 DEFAULT_IMAGE_UNSUPPORTED = 'images/default-unsupported.png';
 DEFAULT_NAME = {};
 DEFAULT_NAME[TYPE_PERSON] = '???';
 DEFAULT_NAME[TYPE_PRODUCT] = '???';
 DEFAULT_NAME[TYPE_PLACE] = '???';
 DEFAULT_NAME[TYPE_ORGANIZATION] = '???';
+DEFAULT_NAME[TYPE_SERVICE] = '???';
 UNSUPPORTED_STORY_JSON = {
   "schema:name": "Unsupported Story",
   "schema:image": DEFAULT_IMAGE_UNSUPPORTED
@@ -64,6 +68,10 @@ angular.module('reelyactive.cuttlefish', [ 'ngAnimate', 'ui.bootstrap' ])
                 scope.organization = formatItem(graph[cItem],
                                                 TYPE_ORGANIZATION);
                 scope.types.push(TYPE_ORGANIZATION);
+                break;
+              case 'schema:Service':
+                scope.service = formatItem(graph[cItem], TYPE_SERVICE);
+                scope.types.push(TYPE_SERVICE);
                 break;
             }
             scope.itemID = Bubble.generateID(graph[cItem]["@id"]);
