@@ -92,7 +92,8 @@ var ble_uuid16 = {
   "fe08": "Organization/Microsoft/",
   "fdf0": "Organization/Google/",
   "fdee": "Organization/Huawei_Technologies_Co_Ltd/",
-  "fde2": "Organization/Google/"
+  "fde2": "Organization/Google/",
+  "fd6f": "Service/Contact_Tracing/"
 };
 
 
