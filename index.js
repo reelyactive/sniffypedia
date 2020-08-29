@@ -144,6 +144,7 @@ var ble_companyIdentifiers = {
   "005f": "Organization/Wicentric_Inc/",
   "006b": "Organization/Polar_Electro_Oy/",
   "0075": "Organization/Samsung/",
+  "0077": "Organization/Laird_Connectivity/",
   "0078": "Organization/Nike_Inc/",
   "0087": "Organization/Garmin_International/",
   "008a": "Organization/Jawbone/",
@@ -187,6 +188,7 @@ var ble_companyIdentifiers = {
   "0499": "Organization/Ruuvi_Innovations_Ltd/",
   "0528": "Organization/Lunera_Inc/",
   "0583": "Organization/Code_Blue_Communications_Inc/",
+  "0590": "Organization/Pur3_Ltd/",
   "0639": "Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
 };
 
