@@ -25,6 +25,7 @@ var ble_uuid16 = {
   "feef": "Organization/Polar_Electro_Oy/",
   "feee": "Organization/Polar_Electro_Oy/",
   "feed": "Product/Tile_Tile/",
+  "feec": "Product/Tile_Tile/",
   "feeb": "Organization/Swirl_Networks_Inc/",
   "feea": "Organization/Swirl_Networks_Inc/",
   "fee7": "Organization/Tencent_Holdings_Limited/",
@@ -118,7 +119,16 @@ var ble_uuid16 = {
   "fd7e": "Organization/Samsung/",
   "fd7c": "Organization/Toshiba_Corporation/",
   "fd72": "Organization/Logitech_International_SA/",
-  "fd6f": "Service/Contact_Tracing/"
+  "fd6f": "Service/Contact_Tracing/",
+  "fd6c": "Organization/Samsung/",
+  "fd69": "Organization/Samsung/",
+  "fd63": "Product/Fitbit_Wearable/",
+  "fd62": "Product/Fitbit_Wearable/",
+  "fd5a": "Organization/Samsung/",
+  "fd59": "Organization/Samsung/",
+  "fd4b": "Organization/Samsung/",
+  "fd44": "Organization/Apple_Inc/",
+  "fd43": "Organization/Apple_Inc/"
 };
 
 
