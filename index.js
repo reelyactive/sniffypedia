@@ -134,15 +134,16 @@ var ble_uuid16 = {
 
 // Bluetooth Low Energy 128-bit UUIDs
 var ble_uuid128 = {
-  "adab0bd16e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
-  "adab0cf56e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
-  "adab71766e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
-  "adabfb006e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
   "52052c11e701478299f58ce88dbb1500": "Product/Allegion_ENGAGE/",
   "6e400001b5a3f393e0a9e50e24dcca9e": "Organization/Nordic_Semiconductor_ASA/",
   "7265656c794163746976652055554944": "Product/reelyActive_RA-R436/",
   "7265656c7941707020416e64726f6964": "Product/reelyActive_reelyApp-Android/",
   "7265656c7941707020666f7220694f53": "Product/reelyActive_reelyApp-iOS/",
+  "7a4385c9f7c74e229afd16d68fc588ca": "Product/SocketMobile_S550/",
+  "adab0bd16e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
+  "adab0cf56e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
+  "adab71766e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
+  "adabfb006e7d4601bda2bffaa68956ba": "Product/Fitbit_Wearable/",
   "cbbfe0e1f7f3420684e084cbb3d09dfc": "Product/ASUS_Nexus-Player/",
   "d2d3f8ef9c994d9ca2b391c85d44326c": "Product/Nest_Cam/",
   "d5060001a904deb947482c7f4a124842": "Product/Thalmic-Labs_Myo/",
@@ -157,6 +158,7 @@ var ble_companyIdentifiers = {
   "0004": "Organization/Toshiba_Corporation/",
   "0006": "Organization/Microsoft/",
   "000a": "Organization/CSR/",
+  "0044": "Organization/Socket_Mobile/",
   "004c": "Organization/Apple_Inc/",
   "0059": "Organization/Nordic_Semiconductor_ASA/",
   "005f": "Organization/Wicentric_Inc/",
