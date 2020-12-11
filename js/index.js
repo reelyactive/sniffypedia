@@ -158,7 +158,7 @@ var ble_companyIdentifiers = {
   "0004": "Organization/Toshiba_Corporation/",
   "0006": "Organization/Microsoft/",
   "000a": "Organization/CSR/",
-  "0044": "Organization/Socket_Mobile",
+  "0044": "Organization/Socket_Mobile/",
   "004c": "Organization/Apple_Inc/",
   "0059": "Organization/Nordic_Semiconductor_ASA/",
   "005f": "Organization/Wicentric_Inc/",
