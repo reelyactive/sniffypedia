@@ -146,7 +146,8 @@ var ble_uuid128 = {
   "cbbfe0e1f7f3420684e084cbb3d09dfc": "Product/ASUS_Nexus-Player/",
   "d2d3f8ef9c994d9ca2b391c85d44326c": "Product/Nest_Cam/",
   "d5060001a904deb947482c7f4a124842": "Product/Thalmic-Labs_Myo/",
-  "f02adfc026e711e49edc0002a5d5c51b": "Product/Shortcut-Labs_FLIC/"
+  "f02adfc026e711e49edc0002a5d5c51b": "Product/Shortcut-Labs_FLIC/",
+  "7a4385c9f7c74e229afd16d68fc588ca": "Product/SocketMobile_S550/"
 };
 
 
@@ -157,6 +158,7 @@ var ble_companyIdentifiers = {
   "0004": "Organization/Toshiba_Corporation/",
   "0006": "Organization/Microsoft/",
   "000a": "Organization/CSR/",
+  "0044": "Organization/Socket_Mobile",
   "004c": "Organization/Apple_Inc/",
   "0059": "Organization/Nordic_Semiconductor_ASA/",
   "005f": "Organization/Wicentric_Inc/",
