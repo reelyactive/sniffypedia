@@ -13,9 +13,9 @@
     "linked data",
     "semantic web"
   ],
-  "version": "0.1.22",
+  "version": "1.0.0",
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=6.0.0"
   },
   "main": "./index.js",
   "repository": {
@@ -23,7 +23,9 @@
     "url": "https://github.com/reelyactive/sniffypedia.git"
   },
   "dependencies": {},
-  "devDependencies": {},
+  "devDependencies": {
+    "mocha": "^6.0.0"
+  },
   "bugs": {
     "url": "https://github.com/reelyactive/sniffypedia/issues"
   },

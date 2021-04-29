@@ -15,11 +15,35 @@ Installation
 Hello Sniffypedia
 -----------------
 
-```javascript
-var sniffypedia = require('sniffypedia');
+Provide an identifier and any options to lookup against a URI.
 
-console.log(sniffypedia.index);
+```javascript
+const sniffypedia = require('sniffypedia');
+
+let id = '004c'; // Bluetooth LE Company Identifier to look up
+let options = { protocol: "ble", type: "companyIdentifier" };
+
+let uri = sniffypedia.lookup(id, options);
+
+console.log(uri); // https://sniffypedia.org/Organization/Apple_Inc/ 
 ```
+
+The output should be [https://sniffypedia.org/Organization/Apple_Inc/](https://sniffypedia.org/Organization/Apple_Inc/) as 0x004c is Apple's Bluetooth-assigned company identifier.
+
+
+Project History
+---------------
+
+The __sniffypedia__ project began in 2016 to associate wireless device identifiers with structured data about the products and organizations they represent, including links to websites, social media channels and images.
+
+In 2021, __sniffypedia__ was redesigned and updated to v1.x to better reflect the best practices for coding of the time and to couple with [advlib](https://github.com/reelyactive/advlib) v1.x.
+
+
+What's next?
+------------
+
+__sniffypedia__ v1.0.0 was released in April 2021, superseding all earlier versions, the latest of which remains available in the [release-0.1 branch](https://github.com/reelyactive/sniffypedia/tree/release-0.1) and as [sniffypedia@0.1.22 on npm](https://www.npmjs.com/package/sniffypedia/v/0.1.22).
+
 
 License
 -------
