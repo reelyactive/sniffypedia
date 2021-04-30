@@ -25,10 +25,34 @@ let options = { protocol: "ble", type: "companyIdentifier" };
 
 let uri = sniffypedia.lookup(id, options);
 
-console.log(uri); // https://sniffypedia.org/Organization/Apple_Inc/ 
+console.log(uri);
 ```
 
-The output should be [https://sniffypedia.org/Organization/Apple_Inc/](https://sniffypedia.org/Organization/Apple_Inc/) as 0x004c is Apple's Bluetooth-assigned company identifier.
+The output should be [https://sniffypedia.org/Organization/Apple_Inc/](https://sniffypedia.org/Organization/Apple_Inc/) as _0x004c_ is Apple's Bluetooth-assigned company identifier.
+
+
+Options
+-------
+
+__sniffypedia__ supports the following options for its lookup function:
+
+| Property | Default                   | Description                          | 
+|:---------|:--------------------------|:-------------------------------------|
+| origin   | 'https://sniffypedia.org' | URI origin to which path is appended |
+| protocol | null                      | See Indexed URIs below               |
+| type     | null                      | See Indexed URIs below               |
+
+
+Indexed URIs
+------------
+
+The Sniffypedia index includes:
+
+| protocol | type                | Description                                 |
+|:---------|:--------------------|:--------------------------------------------|
+| null     | null                | Protocol-agnostic 128-bit UUIDs             |
+| 'ble'    | 'companyIdentifier' | [16-bit Bluetooth-assigned Company Identifiers](https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers) |
+| 'ble'    | 'uuid16'            | [16-bit Bluetooth-assigned UUIDs for members](https://www.bluetooth.com/specifications/assigned-numbers/16-bit-uuids-for-members) |
 
 
 Project History
