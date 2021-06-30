@@ -13,12 +13,17 @@ const INPUT_DATA_INVALID_ID = 'n/a';
 const INPUT_DATA_KNOWN_UUID = 'f7826da64fa24e988024bc5b71e0893e';
 const INPUT_DATA_BLE_UUID16 = 'feaa';
 const INPUT_DATA_BLE_UUID16_OPTIONS = { protocol: 'ble', type: 'uuid16' };
+const INPUT_DATA_BLE_COMPANY_ID_STRING = '004c';
+const INPUT_DATA_BLE_COMPANY_ID_NUMBER = 76;
+const INPUT_DATA_BLE_COMPANY_ID_OPTIONS = { protocol: 'ble',
+                                            type: 'companyIdentifier' };
 
 
 // Expected outputs for the scenario
 const EXPECTED_DATA_INVALID_INPUT = null;
 const EXPECTED_DATA_KNOWN_UUID = 'https://sniffypedia.org/Product/Kontakt_Beacon/';
 const EXPECTED_DATA_BLE_UUID16 = 'https://sniffypedia.org/Product/Google_Eddystone/';
+const EXPECTED_DATA_BLE_COMPANY_ID = 'https://sniffypedia.org/Organization/Apple_Inc/';
 
 
 // Describe the scenario
@@ -40,6 +45,20 @@ describe('sniffypedia', function() {
     assert.deepEqual(sniffypedia.lookup(INPUT_DATA_BLE_UUID16,
                                         INPUT_DATA_BLE_UUID16_OPTIONS),
                      EXPECTED_DATA_BLE_UUID16);
+  });
+
+  // Test the lookup function with a CompanyIdentifier as String
+  it('should handle a BLE company identifier as String', function() {
+    assert.deepEqual(sniffypedia.lookup(INPUT_DATA_BLE_COMPANY_ID_STRING,
+                                        INPUT_DATA_BLE_COMPANY_ID_OPTIONS),
+                     EXPECTED_DATA_BLE_COMPANY_ID);
+  });
+
+  // Test the lookup function with a CompanyIdentifier as Number
+  it('should handle a BLE company identifier as Number', function() {
+    assert.deepEqual(sniffypedia.lookup(INPUT_DATA_BLE_COMPANY_ID_NUMBER,
+                                        INPUT_DATA_BLE_COMPANY_ID_OPTIONS),
+                     EXPECTED_DATA_BLE_COMPANY_ID);
   });
 
 });
