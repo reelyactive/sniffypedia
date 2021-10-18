@@ -185,6 +185,7 @@ var ble_companyIdentifiers = {
   "00e0": "Organization/Google/",
   "00f0": "Organization/PayPal_Inc/",
   "0104": "Organization/PLUS_Location_Systems/",
+  "011b": "Organization/Aruba_Networks/",
   "012d": "Organization/Sony_Corporation/",
   "0131": "Organization/Cypress_Semiconductor_Corporation/",
   "0136": "Organization/Seed_Labs_Inc/",
