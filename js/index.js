@@ -132,7 +132,17 @@ var ble_uuid16 = {
   "fd59": "Organization/Samsung/",
   "fd4b": "Organization/Samsung/",
   "fd44": "Organization/Apple_Inc/",
-  "fd43": "Organization/Apple_Inc/"
+  "fd43": "Organization/Apple_Inc/",
+  "fd36": "Organization/Google/",
+  "fd31": "Organization/LG_Electronics/",
+  "fd2d": "Organization/Xiaomi/",
+  "fd2a": "Organization/Sony_Corporation/",
+  "fd22": "Organization/Huawei_Technologies_Co_Ltd/",
+  "fd21": "Organization/Huawei_Technologies_Co_Ltd/",
+  "fd1d": "Organization/Samsung/",
+  "fd03": "Organization/Quuppa_Oy/",
+  "fcf1": "Organization/Google/",
+  "fce1": "Organization/Sony_Corporation/"
 };
 
 
