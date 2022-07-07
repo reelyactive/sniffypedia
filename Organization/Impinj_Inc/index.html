@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title> Impinj Inc. </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.2/ui-bootstrap-tpls.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
+    <link rel="stylesheet" href="../../style/bubble.css">
+    <link rel="stylesheet" href="../../style/organization.css">
+    <script type="text/javascript" src="../../js/bubble.js"></script>
+    <script type="text/javascript" src="../../js/cormorant.js"></script>
+    <script type="text/javascript" src="../../js/cuttlefish.js"></script>
+    <script type="text/javascript" src="../../js/visualisation.js"></script>
+    <script type="application/ld+json">
+    {
+      "@context": {
+        "schema": "http://schema.org/"
+      },
+      "@graph": [
+        {
+          "@id": "organization",
+          "@type": "schema:Organization",
+          "schema:name": "Impinj",
+          "schema:url": "https://sniffypedia.org/Organization/Impinj_Inc/",
+          "schema:logo": "https://sniffypedia.org/Organization/Impinj_Inc/600x600.png",
+          "schema:sameAs": [
+            "https://www.impinj.com/",
+            "https://twitter.com/impinj",
+            "https://www.linkedin.com/company/impinj/",
+            "https://www.facebook.com/impinj/",
+            "https://www.youtube.com/impinj"
+          ]
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body ng-app="visualisation">
+    <div ng-controller="BubbleCtrl" class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 bubble-container">
+          <bubble ng-if="story" json="story" size="240px" toggle="false">
+          </bubble>
+        </div>
+        <div class="col-md-6">
+          <br>
+          <pre uib-tooltip="Machine-readable Schema.org & JSON-LD"
+               tooltip-placement="bottom-right">{{storyString}}</pre>
+          <p class="text-center">
+            <a href="../../" class="btn btn-info btn-sm"> Sniffypedia </a>
+            <a href="../../about/" class="btn btn-default btn-sm"> About </a>
+            <a href="../../contribute/"
+               class="btn btn-default btn-sm"> Contribute </a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> &nbsp; This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </footer>
+  </body>
+</html>
