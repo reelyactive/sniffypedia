@@ -144,7 +144,9 @@ var ble_uuid16 = {
   "fd1d": "Organization/Samsung/",
   "fd03": "Organization/Quuppa_Oy/",
   "fcf1": "Organization/Google/",
-  "fce1": "Organization/Sony_Corporation/"
+  "fce1": "Organization/Sony_Corporation/",
+  "fcdc": "Organization/Amazon_com_Services_Inc/",
+  "fccf": "Organization/Google/"
 };
 
 
