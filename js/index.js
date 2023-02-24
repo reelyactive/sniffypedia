@@ -107,6 +107,8 @@ var ble_uuid16 = {
   "fdd2": "Organization/Bose_Corporation/",
   "fdd1": "Organization/Huawei_Technologies_Co_Ltd/",
   "fdd0": "Organization/Huawei_Technologies_Co_Ltd/",
+  "fdc1": "Organization/Hunter_Douglas/",
+  "fdc0": "Organization/Hunter_Douglas/",
   "fdb4": "Organization/HP_Inc/",
   "fdaf": "Organization/Wiliot_Ltd/",
   "fdab": "Organization/Xiaomi/",
@@ -231,7 +233,8 @@ var ble_companyIdentifiers = {
   "0590": "Organization/Pur3_Ltd/",
   "05a7": "Organization/Sonos_Inc/",
   "060f": "Organization/Signify/",
-  "0639": "Organization/Shenzhen_Minew_Technologies_Co_Ltd/"
+  "0639": "Organization/Shenzhen_Minew_Technologies_Co_Ltd/",
+  "0819": "Organization/Hunter_Douglas/"
 };
 
 
