@@ -1,7 +1,10 @@
 {
   "name": "sniffypedia",
-  "homepage": "https://github.com/reelyactive/sniffypedia/",
-  "author": "reelyActive <webdev@reelyactive.com>",
+  "homepage": "https://sniffypedia.org",
+  "author": {
+    "name": "reelyActive",
+    "email": "info@reelyactive.com"
+  },
   "description": "An open, collaborative lookup of radio-identifiable (sniffable) things, represented as structured data.  We believe in an open Internet of Things.",
   "keywords": [
     "reelyActive",
@@ -13,7 +16,7 @@
     "linked data",
     "semantic web"
   ],
-  "version": "1.1.5",
+  "version": "1.1.6",
   "engines": {
     "node": ">=6.0.0"
   },
