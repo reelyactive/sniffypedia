@@ -230,6 +230,7 @@ var ble_companyIdentifiers = {
   "03da": "Organization/EnOcean_GmbH/",
   "0499": "Organization/Ruuvi_Innovations_Ltd/",
   "0500": "Organization/Wiliot_Ltd/",
+  "0505": "Organization/InPlay_Inc/",
   "0528": "Organization/Lunera_Inc/",
   "0583": "Organization/Code_Blue_Communications_Inc/",
   "0590": "Organization/Pur3_Ltd/",
