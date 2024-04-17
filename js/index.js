@@ -152,6 +152,7 @@ var ble_uuid16 = {
 
 // Bluetooth Low Energy 128-bit UUIDs
 var ble_uuid128 = {
+  "1c930001d45911e79296b8e856369374": "Product/Sensor-Works_BluVib",
   "52052c11e701478299f58ce88dbb1500": "Product/Allegion_ENGAGE/",
   "6e400001b5a3f393e0a9e50e24dcca9e": "Organization/Nordic_Semiconductor_ASA/",
   "7265656c794163746976652055554944": "Product/reelyActive_RA-R436/",
