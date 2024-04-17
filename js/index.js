@@ -153,7 +153,13 @@ var ble_uuid16 = {
   "fce1": "Organization/Sony_Corporation/",
   "fcdc": "Organization/Amazon_com_Services_Inc/",
   "fccf": "Organization/Google/",
-  "fcc0": "Organization/Xiaomi/"
+  "fcc6": "Organization/Wiliot_Ltd/",
+  "fcc3": "Organization/HP_Inc/",
+  "fcc0": "Organization/Xiaomi/",
+  "fcbd": "Organization/Toshiba_Corporation/",
+  "fcb2": "Organization/Apple_Inc/",
+  "fcb1": "Organization/Google/",
+  "fca4": "Organization/HP_Inc/"
 };
 
 
@@ -234,6 +240,7 @@ var ble_companyIdentifiers = {
   "02d3": "Organization/Powercast_Corporation/",
   "02f2": "Organization/GoPro_Inc/",
   "0309": "https://www.dolby.com/",
+  "03da": "Organization/EnOcean_GmbH/",
   "038f": "Organization/Xiaomi/",
   "0399": "Organization/Nikon_Corporation/",
   "03c2": "Organization/Snapchat_Inc/",
