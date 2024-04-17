@@ -32,6 +32,7 @@ var ble_uuid16 = {
   "fee6": "Organization/Seed_Labs_Inc/",
   "fee5": "Organization/Nordic_Semiconductor_ASA/",
   "fee4": "Organization/Nordic_Semiconductor_ASA/",
+  "fee1": "Organization/Zepp_Inc/",
   "fee0": "Organization/Zepp_Inc/",
   "fedd": "Organization/Jawbone/",
   "fedc": "Organization/Jawbone/",
@@ -151,7 +152,8 @@ var ble_uuid16 = {
   "fcf1": "Organization/Google/",
   "fce1": "Organization/Sony_Corporation/",
   "fcdc": "Organization/Amazon_com_Services_Inc/",
-  "fccf": "Organization/Google/"
+  "fccf": "Organization/Google/",
+  "fcc0": "Organization/Xiaomi/"
 };
 
 
@@ -214,7 +216,7 @@ var ble_companyIdentifiers = {
   "013a": "Organization/Tencent_Holdings_Limited/",
   "0147": "Organization/Mighty_Cast_Inc/",
   "0154": "Organization/Pebble_Technology_Corporation/",
-  "0157": "Organization/Xiaomi/",
+  "0157": "Organization/Zepp_Inc/",
   "015d": "Organization/Estimote_Inc/",
   "015e": "Organization/UniKey_Technologies_Inc/",
   "0171": "Organization/Amazon_com_Services_Inc/",
@@ -232,6 +234,7 @@ var ble_companyIdentifiers = {
   "02d3": "Organization/Powercast_Corporation/",
   "02f2": "Organization/GoPro_Inc/",
   "0309": "https://www.dolby.com/",
+  "038f": "Organization/Xiaomi/",
   "0399": "Organization/Nikon_Corporation/",
   "03c2": "Organization/Snapchat_Inc/",
   "03da": "Organization/EnOcean_GmbH/",
