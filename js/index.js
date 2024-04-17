@@ -32,6 +32,7 @@ var ble_uuid16 = {
   "fee6": "Organization/Seed_Labs_Inc/",
   "fee5": "Organization/Nordic_Semiconductor_ASA/",
   "fee4": "Organization/Nordic_Semiconductor_ASA/",
+  "fee0": "Organization/Zepp_Inc/",
   "fedd": "Organization/Jawbone/",
   "fedc": "Organization/Jawbone/",
   "fed9": "Organization/Pebble_Technology_Corporation/",
