@@ -59,6 +59,10 @@ var ble_uuid16 = {
   "feb2": "Organization/Microsoft/",
   "feb0": "Organization/Nest_Labs/",
   "feaf": "Organization/Nest_Labs/",
+  "feae": "Organization/Nokia/",
+  "fead": "Organization/Nokia/",
+  "feac": "Organization/Nokia/",
+  "feab": "Organization/Nokia/",
   "feaa": "Product/Google_Eddystone/",
   "fea6": "Organization/GoPro_Inc/",
   "fea5": "Organization/GoPro_Inc/",
@@ -174,6 +178,7 @@ var ble_uuid128 = {
 // Bluetooth Low Energy company identifiers
 // See:https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers
 var ble_companyIdentifiers = {
+  "0001": "Organization/Nokia/",
   "0003": "Organization/IBM_Corporation/",
   "0004": "Organization/Toshiba_Corporation/",
   "0006": "Organization/Microsoft/",
