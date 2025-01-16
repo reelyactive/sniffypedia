@@ -254,6 +254,7 @@ var ble_companyIdentifiers = {
   "05a7": "Organization/Sonos_Inc/",
   "060f": "Organization/Signify/",
   "0639": "Organization/Shenzhen_Minew_Technologies_Co_Ltd/",
+  "075b": "Organization/Smart_Sensor_Devices_AB/",
   "0819": "Organization/Hunter_Douglas/",
   "0a62": "Organization/MOKO_Technology_Ltd/"
 };
