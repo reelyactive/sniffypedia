@@ -159,7 +159,22 @@ var ble_uuid16 = {
   "fcbd": "Organization/Toshiba_Corporation/",
   "fcb2": "Organization/Apple_Inc/",
   "fcb1": "Organization/Google/",
-  "fca4": "Organization/HP_Inc/"
+  "fca4": "Organization/HP_Inc/",
+  "fca0": "Organization/Apple_Inc/",
+  "fc98": "Organization/Ruuvi_Innovations_Ltd/",
+  "fc94": "Organization/Apple_Inc/",
+  "fc91": "Organization/Samsung/",
+  "fc90": "Organization/Wiliot_Ltd/",
+  "fc8f": "Organization/Bose_Corporation/",
+  "fc79": "Organization/LG_Electronics/",
+  "fc75": "Organization/Xiaomi/",
+  "fc73": "Organization/Google/",
+  "fc6b": "Organization/Sonos_Inc/",
+  "fc6a": "Organization/Sonos_Inc/",
+  "fc66": "Organization/Xiaomi/",
+  "fc58": "Organization/Shenzhen_Minew_Technologies_Co_Ltd/",
+  "fc56": "Organization/Google/",
+  "fc52": "Organization/LG_Electronics/"
 };
 
 
