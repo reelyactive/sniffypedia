@@ -176,7 +176,9 @@ var ble_uuid16 = {
   "fc66": "Organization/Xiaomi/",
   "fc58": "Organization/Shenzhen_Minew_Technologies_Co_Ltd/",
   "fc56": "Organization/Google/",
-  "fc52": "Organization/LG_Electronics/"
+  "fc52": "Organization/LG_Electronics/",
+  "fc4c": "Organization/HP_Inc/",
+  "fc46": "Organization/Xiaomi/"
 };
 
 
@@ -275,7 +277,8 @@ var ble_companyIdentifiers = {
   "0757": "Organization/ELA_Innovation_SA/",
   "075b": "Organization/Smart_Sensor_Devices_AB/",
   "0819": "Organization/Hunter_Douglas/",
-  "0a62": "Organization/MOKO_Technology_Ltd/"
+  "0a62": "Organization/MOKO_Technology_Ltd/",
+  "1040": "Organization/Raspberry_Pi/"
 };
 
 
