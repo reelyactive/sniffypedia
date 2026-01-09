@@ -178,6 +178,7 @@ var ble_uuid16 = {
   "fc56": "Organization/Google/",
   "fc52": "Organization/LG_Electronics/",
   "fc4c": "Organization/HP_Inc/",
+  "fc49": "Organization/Golioth_Inc/",
   "fc46": "Organization/Xiaomi/"
 };
 
