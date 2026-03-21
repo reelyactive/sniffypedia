@@ -110,6 +110,7 @@ var ble_uuid16 = {
   "fdf0": "Organization/Google/",
   "fdee": "Organization/Huawei_Technologies_Co_Ltd/",
   "fde2": "Organization/Google/",
+  "fddf": "Organization/HARMAN_International/",
   "fddb": "Organization/Samsung/",
   "fdd2": "Organization/Bose_Corporation/",
   "fdd1": "Organization/Huawei_Technologies_Co_Ltd/",
@@ -170,11 +171,13 @@ var ble_uuid16 = {
   "fc91": "Organization/Samsung/",
   "fc90": "Organization/Wiliot_Ltd/",
   "fc8f": "Organization/Bose_Corporation/",
+  "fc7e": "Organization/HARMAN_International/",
   "fc79": "Organization/LG_Electronics/",
   "fc75": "Organization/Xiaomi/",
   "fc73": "Organization/Google/",
   "fc6b": "Organization/Sonos_Inc/",
   "fc6a": "Organization/Sonos_Inc/",
+  "fc69": "Organization/HARMAN_International/",
   "fc66": "Organization/Xiaomi/",
   "fc58": "Organization/Shenzhen_Minew_Technologies_Co_Ltd/",
   "fc56": "Organization/Google/",
@@ -183,7 +186,8 @@ var ble_uuid16 = {
   "fc49": "Organization/Golioth_Inc/",
   "fc46": "Organization/Xiaomi/",
   "fc3e": "Organization/Google/",
-  "fc3d": "Organization/Reelables_Inc/"
+  "fc3d": "Organization/Reelables_Inc/",
+  "fc39": "Organization/HARMAN_International/"
 };
 
 
@@ -217,6 +221,7 @@ var ble_companyIdentifiers = {
   "000a": "Organization/CSR/",
   "0044": "Organization/Socket_Mobile/",
   "004c": "Organization/Apple_Inc/",
+  "0057": "Organization/HARMAN_International/",
   "0059": "Organization/Nordic_Semiconductor_ASA/",
   "005f": "Organization/Wicentric_Inc/",
   "0065": "Organization/HP_Inc/",
