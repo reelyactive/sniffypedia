@@ -181,7 +181,9 @@ var ble_uuid16 = {
   "fc52": "Organization/LG_Electronics/",
   "fc4c": "Organization/HP_Inc/",
   "fc49": "Organization/Golioth_Inc/",
-  "fc46": "Organization/Xiaomi/"
+  "fc46": "Organization/Xiaomi/",
+  "fc3e": "Organization/Google/",
+  "fc3d": "Organization/Reelables_Inc/"
 };
 
 
@@ -285,6 +287,7 @@ var ble_companyIdentifiers = {
   "075b": "Organization/Smart_Sensor_Devices_AB/",
   "0819": "Organization/Hunter_Douglas/",
   "0a62": "Organization/MOKO_Technology_Ltd/",
+  "0adb": "Organization/Reelables_Inc/",
   "1040": "Organization/Raspberry_Pi/"
 };
 
