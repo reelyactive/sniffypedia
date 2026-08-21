@@ -1,18 +1,12 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html data-bs-theme="dark">
   <head>
     <title> Dialog Semiconductor B.V. </title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.2/ui-bootstrap-tpls.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
-    <link rel="stylesheet" href="../../style/bubble.css">
-    <link rel="stylesheet" href="../../style/organization.css">
-    <script type="text/javascript" src="../../js/bubble.js"></script>
-    <script type="text/javascript" src="../../js/cormorant.js"></script>
-    <script type="text/javascript" src="../../js/cuttlefish.js"></script>
-    <script type="text/javascript" src="../../js/visualisation.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+          integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+          rel="stylesheet" crossorigin="anonymous">
     <script type="application/ld+json">
     {
       "@context": {
@@ -36,28 +30,42 @@
     }
     </script>
   </head>
-  <body ng-app="visualisation">
-    <div ng-controller="BubbleCtrl" class="container-fluid">
-      <div class="row">
-        <div class="col-md-6 bubble-container">
-          <bubble ng-if="story" json="story" size="240px" toggle="false">
-          </bubble>
+  <body class="d-flex flex-column min-vh-100">
+    <main class="container-fluid flex-shrink-0">
+      <div class="row justify-content-center bg-body-tertiary my-5">
+        <div class="col-md-4 col-xxl-3 align-self-center">
+          <div id="storyRender" class="p-3"></div>
         </div>
-        <div class="col-md-6">
-          <br>
-          <pre uib-tooltip="Machine-readable Schema.org & JSON-LD"
-               tooltip-placement="bottom-right">{{storyString}}</pre>
+        <div class="col-md-7 col-xxl-5 align-self-center">
+          <pre id="storyRaw" class="p-3 mb-3">{}</pre>
+          <p class="text-center small text-body-secondary mb-4">
+            Fetched by
+            <a href="https://github.com/reelyactive/cormorant/"
+               target="_blank">cormorant.js</a>
+            and rendered by
+            <a href="https://github.com/reelyactive/cuttlefish/"
+               target="_blank">cuttlefish.js</a>.
+          </p>
           <p class="text-center">
-            <a href="../../" class="btn btn-info btn-sm"> Sniffypedia </a>
-            <a href="../../about/" class="btn btn-default btn-sm"> About </a>
+            <a href="../../"
+               class="btn btn-outline-primary btn-sm"> Sniffypedia </a>
+            <a href="../../about/"
+               class="btn btn-outline-secondary btn-sm"> About </a>
             <a href="../../contribute/"
-               class="btn btn-default btn-sm"> Contribute </a>
+               class="btn btn-outline-secondary btn-sm"> Contribute </a>
           </p>
         </div>
       </div>
-    </div>
-    <footer class="footer">
-      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a> &nbsp; This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+    </main>
+    <footer class="mt-auto py-3 bg-gradient text-center overflow-hidden">
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        <img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/>
+      </a>&nbsp; This work is licensed under a
+      <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+        Creative Commons Attribution-ShareAlike 4.0 International License</a>.
     </footer>
+    <script type="text/javascript" src="../../js/cormorant.js"></script>
+    <script type="text/javascript" src="../../js/cuttlefish-story.js"></script>
+    <script type="text/javascript" src="../../js/visualisation.js"></script>
   </body>
 </html>

@@ -1,191 +1,214 @@
 /**
- * Copyright reelyActive 2016-2017
+ * Copyright reelyActive 2016-2023
  * We believe in an open Internet of Things
  */
 
-angular.module('reelyactive.cormorant', [])
 
-  .factory('cormorant', function cormorantFactory($http) {
+let cormorant = (function() {
 
-    var stories = {};
+  // Internal constants
+  const STATUS_OK = 200;
+  const SIGNATURE_SEPARATOR = '/';
 
-    function extractFromHtml(html) {
-      var tagIndex = html.search(/(<script\s*?type\s*?=\s*?"application\/ld\+json">)/);
-      if(tagIndex < 0) {
-        return null;
-      }
-      var startIndex = html.indexOf('>', tagIndex) + 1;
-      var stopIndex = html.indexOf('</script>', startIndex);
-      var jsonString = html.substring(startIndex, stopIndex);
+  // Internal variables
+  let associations = new Map();
+  let stories = new Map();
+  let digitalTwins = new Map();
 
-      try {
-        json = JSON.parse(jsonString);
-      }
-      catch(e) {
-        console.log(e);
-        console.log(jsonString);
-        return null;
-      }
-      return graphify(json);
+  // Extract the JSON-LD, if present, from the given HTML
+  function extractFromHtml(html) {
+    let tagIndex = html.search(/(<script\s*?type\s*?=\s*?"application\/ld\+json">)/);
+    if(tagIndex < 0) {
+      return null;
+    }
+    let startIndex = html.indexOf('>', tagIndex) + 1;
+    let stopIndex = html.indexOf('</script>', startIndex);
+
+    try {
+      return parseAsStory(JSON.parse(html.substring(startIndex, stopIndex)));
+    }
+    catch(error) {
+      return null;
+    }
+  }
+
+  // Parse the given JSON as a standardised story
+  function parseAsStory(data) {
+    // Handle standard reelyActive API response case
+    if(data.hasOwnProperty('stories')) {
+      let storyId = Object.keys(data.stories)[0];
+      let story = data.stories[storyId];
+
+      return story;
     }
 
-    function graphify(json) {
-      var graph = [];
-      var addSchemaPrefix = false;
-      if((json === null) || (typeof json !== 'object')) {
-        return null;
-      }
-      if(!json.hasOwnProperty('@context')) {
-        console.log('cormorant.js: missing @context', json);
-        return graph;
-      }
+    return data;
+  }
 
-      if(isSchemaOrg(json['@context'])) {
-        addSchemaPrefix = true;
-      }
-      else if(!(json['@context'].hasOwnProperty('schema') &&
-                isSchemaOrg(json['@context'].schema))) {
-        // TODO: handle other contexts
-        console.log('cormorant.js: unsupported @context', json['@context']);
-        return graph;
-      }
+  // Perform a HTTP GET on the given URL with the given accept headers
+  function retrieve(url, acceptHeaders, callback) {
+    fetch(url, { headers: { "Accept": acceptHeaders } })
+      .then((response) => {
+        if(!response.ok) { throw new Error('GET returned ' + response.status); }
+        let contentType = response.headers.get('Content-Type');
+        if(contentType.startsWith('application/json')) {
+          return response.json();
+        }
+        return response.text();
+      })
+      .then((result) => { return callback(result); })
+      .catch((error) => { return callback(null); });
+  }
 
-      if(json.hasOwnProperty('@graph')) {
-        graph = json['@graph'];
-      }
-      else {
-        delete json['@context'];
-        graph.push(json);
-      }
+  // Get the associations for the given device signature
+  function retrieveAssociations(serverUrl, deviceSignature, options, callback) {
+    options = options || {};
+    let url = serverUrl + '/associations/' + deviceSignature;
 
-      if(addSchemaPrefix) {
-        for(var cItem = 0; cItem < graph.length; cItem++) {
-          var item = graph[cItem];
-          addPropertyPrefix(item, 'schema:');
+    retrieve(url, 'application/json', (data) => {
+      let deviceAssociations = null;
+      let isStoryBeingRetrieved = false;
+      let isJsonData = (data !== null) && (typeof data === 'object');
+
+      if(isJsonData) {
+        let returnedDeviceId = null;
+        if(data.hasOwnProperty('associations')) { // chickadee v1.x
+          returnedDeviceSignature = Object.keys(data.associations)[0];
+          deviceAssociations = data.associations[returnedDeviceSignature];
+        }
+        else if(data.hasOwnProperty('devices')) { // chickadee v0.x
+          returnedDeviceSignature = Object.keys(data.devices)[0];
+          deviceAssociations = data.devices[returnedDeviceSignature];
+        }
+        associations.set(deviceSignature, deviceAssociations);
+        associations.set(returnedDeviceSignature, deviceAssociations);
+
+        if(options.isStoryToBeRetrieved && deviceAssociations.url) {
+          isStoryBeingRetrieved = true;
+          retrieveStory(deviceAssociations.url, options,
+                        (story, isRetrievedFromMemory) => {
+            return callback(deviceAssociations, story, isRetrievedFromMemory);
+          });
         }
       }
 
-      return graph;
+      if(!isStoryBeingRetrieved) {
+        return callback(deviceAssociations);
+      }
+    });
+  }
+
+  // Get the story for the given URL
+  function retrieveStory(storyUrl, options, callback) {
+    options = options || {};
+
+    if(stories.has(storyUrl) && !options.isStoryToBeRefetched) {
+      return callback(stories.get(storyUrl), true);
     }
 
-    function isSchemaOrg(context) {
-      if((context === 'http://schema.org') ||
-         (context === 'http://schema.org/')) {
-        return true;
-      }
-      return false;
+    retrieve(storyUrl, 'application/json, text/plain', (data) => {
+      if(!data) { return callback(null, false); }
+
+      let isJsonData = (typeof data === 'object');
+      story = isJsonData ? parseAsStory(data) : extractFromHtml(data);
+      if(story) { stories.set(storyUrl, story); }
+
+      return callback(story, false);
+    });
+  }
+
+  // Get the digital twin for the given device
+  function retrieveDigitalTwin(deviceSignature, device, options, callback) {
+    options = options || {};
+
+    if(digitalTwins.has(deviceSignature)) {
+      // TODO: update digital twin timestamp, refresh if necessary?
+      return callback(digitalTwins.get(deviceSignature), true);
     }
 
-    function addPropertyPrefix(item, prefix) {
-      if(item instanceof Array) {
-        for(var cIndex = 0; cIndex < item.length; cIndex++) {
-          addPropertyPrefix(item[cIndex], prefix);
-        }
-      }
-      else if(typeof item === 'object') {
-        for(property in item) {
-          if(property === '@type') {
-            item[property] = prefix + item[property];
-          }
-          else if(property.substr(0, 1) !== '@') {
-            item[prefix + property] = item[property];
-            delete item[property];
-            if(typeof item[prefix + property] === 'object') {
-              addPropertyPrefix(item[prefix + property], prefix);
-            }
-          }
-        }
-      }
-    }
-
-    function addContextToGraph(graph) {
-      if((graph === null) || !(graph instanceof Array)) {
-        return null;
-      }
-
-      return {
-        '@context': { schema: 'http://schema.org' },
-        '@graph': graph
-      };
-    }
-
-    function getStoryTypes(story) {
-      var types = [];
-
-      if(story && story.hasOwnProperty('@graph') &&
-         story['@graph'] instanceof Array) {
-        for(var cType = 0; cType < story['@graph'].length; cType++) {
-          types.push(story['@graph'][cType]['@type']);
-        }
-      }
-
-      return types;
-    }
-
-    function combine(story1, story2) {
-      var types1 = getStoryTypes(story1);
-      var types2 = getStoryTypes(story2);
-
-      if(types1.length > 0) {
-        var combined = Object.assign({}, story1);
-        for(var cType = 0; cType < types2.length; cType++) {
-          var index = types1.indexOf(types2[cType]);
-          if(index < 0) {
-            combined['@graph'].push(story2['@graph'][cType]);
-          }
-          else {
-            combined['@graph'][index] = story2['@graph'][cType];
-          }
-        }
-        return combined;
-      }
-      return story1;
-    }
-
-    var get = function(url, callback) {
-      if(!url || (typeof url !== 'string')) {
-        return callback(null, null);
-      }
-      if(stories.hasOwnProperty(url)) {
-        return callback(stories[url], url);
-      }
-      $http.defaults.headers.common.Accept = 'application/json, text/plain';
-      $http({ method: 'GET', url: url })
-        .then(function(response) { // Success
-          switch(typeof response.data) {
-            case 'string':
-              stories[url] = addContextToGraph(extractFromHtml(response.data));
-              return callback(stories[url], url);
-            case 'object':
-              stories[url] = addContextToGraph(graphify(response.data));
-              return callback(response.data, url);
-          }
-        }, function(response) {    // Error
-          console.log('cormorant.js: GET ' + url + ' returned status ' +
-                      response.status);
-          stories[url] = null;
-          return callback(null, url);
+    if(!associations.has(deviceSignature) && options.associationsServerUrl) {
+      retrieveAssociations(options.associationsServerUrl, deviceSignature,
+                           { isStoryToBeRetrieved: true },
+                           (deviceAssociations, story) => {
+        updateDigitalTwin(deviceSignature, story);
+        return callback(digitalTwins.get(deviceSignature), false);
       });
-    };
-
-    var getCombined = function(url1, url2, id, callback) {
-      get(url1, function(story1) {
-        if(!story1) {
-          return callback(null, id);
-        }
-        get(url2, function(story2) {
-          if(!story2) {
-            return callback(story1, id);
-          }
-          var combinedStory = combine(story1, story2);
-          callback(combinedStory, id);
+    }
+    else if(device) {
+      if(device.url) {
+        retrieveStory(device.url, {}, (story) => {
+          updateDigitalTwin(deviceSignature, story);
+          // TODO: device.statid.uri
+          return callback(digitalTwins.get(deviceSignature), false);
         });
-      });
-    };
-
-    return {
-      getStory: get,
-      getCombinedStory: getCombined,
-      getStories: function() { return stories; }
+      }
+      else if(device.statid && device.statid.uri) {
+        retrieveStory(device.statid.uri, {}, (story) => {
+          updateDigitalTwin(deviceSignature, story);
+          return callback(digitalTwins.get(deviceSignature), false);
+        });
+      }
     }
-  });
+    else {
+      return callback(null);
+    }
+  }
+
+  // Update the digital twin of the given device using the given story
+  function updateDigitalTwin(deviceSignature, story) {
+    if(!story) { return; }
+
+    let storyCovers = [];
+
+    if(story.hasOwnProperty('@graph') && Array.isArray(story['@graph'])) {
+      story['@graph'].forEach(storyElement => {
+        let storyCover = determineStoryCover(storyElement);
+        if(storyCover) { storyCovers.push(storyCover); }
+      });
+      digitalTwins.set(deviceSignature, { story: story,
+                                          storyCovers: storyCovers });
+    }
+    else {
+      // TODO: transform to graph (flattened) representation
+    }
+  }
+
+  // Determine the title and image for the storyCover
+  function determineStoryCover(element) {
+    let title;
+    let imageUrl;
+
+    if(element.hasOwnProperty("schema:name")) {
+      title = element["schema:name"];
+    }
+    else if(element.hasOwnProperty("schema:givenName") ||
+            element.hasOwnProperty("schema:familyName")) {
+      title = (element["schema:givenName"] || '') + ' ' +
+             (element["schema:familyName"] || '');
+    }
+
+    if(element.hasOwnProperty("schema:image")) {
+      imageUrl = element["schema:image"];
+    }
+    else if(element.hasOwnProperty("schema:logo")) {
+      imageUrl = element["schema:logo"];
+    }
+
+    if(title || imageUrl) {
+      return { title: title || '', imageUrl: imageUrl }
+    }
+
+    return null;
+  }
+
+  // Expose the following functions and variables
+  return {
+    retrieveAssociations: retrieveAssociations,
+    retrieveStory: retrieveStory,
+    retrieveDigitalTwin, retrieveDigitalTwin,
+    associations: associations,
+    stories: stories,
+    digitalTwins: digitalTwins
+  }
+
+}());

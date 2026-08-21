@@ -7,79 +7,63 @@
  */
 
 
-/**
- * Contribute Module
- * All of the JavaScript specific to the contribute page is contained inside
- * this angular module.  The only external dependencies are:
- * - AngularUI Bootstrap
- * - cormorant (reelyActive)
- * - cuttlefish (reelyActive)
- */
-angular.module('contribute', [ 'ui.bootstrap', 'reelyactive.cormorant',
-                               'reelyactive.cuttlefish' ])
+fetchButton.addEventListener('click', handleFetch);
+productName.addEventListener('input', handleProduct);
+productManufacturer.addEventListener('input', handleProduct);
+productModel.addEventListener('input', handleProduct);
+productUrl.addEventListener('input', handleProduct);
+productImageUrl.addEventListener('input', handleProduct);
 
 
-/**
- * ContributionCtrl Controller
- * Handles the manipulation of all variables accessed by the HTML view.
- */
-.controller('ContributionCtrl', function($scope, cormorant) {
-
-  // Variables accessible in the HTML scope
-  $scope.graph = { 
-    product: { "@id": "product", "@type": "schema:Product" }
-  };
-  $scope.json = {
-    "@context": { "schema": "http://schema.org/" },
-    "@graph": [ $scope.graph.product ]
-  };
-  $scope.product = {};
-
-  // Handle representation form change
-  $scope.change = function () {
-    for(var key in $scope.product) {
-      if($scope.product.hasOwnProperty(key)) {
-        if(key === 'manufacturer') {
-          var hasNonEmptyManufacturerField = false;
-          $scope.graph.product["schema:manufacturer"] = 
-                                         { "@type": "schema:Organization" };
-          for(var field in $scope.product.manufacturer) {
-            if($scope.product.manufacturer.hasOwnProperty(field)) {
-              if(!$scope.product.manufacturer[field].length) {
-                delete $scope.graph.product["schema:manufacturer"][field];
-              }
-              else {
-                hasNonEmptyManufacturerField = true;
-                $scope.graph.product["schema:manufacturer"]["schema:" + field]
-                                         = $scope.product.manufacturer[field];
-              }
-            }
-          }
-          if(!hasNonEmptyManufacturerField) {
-            delete $scope.graph.product["schema:manufacturer"];
-          }
-        }
-        else if(!$scope.product[key].length) {
-          delete $scope.graph.product["schema:" + key];
-        }
-        else {
-          $scope.graph.product["schema:" + key] = $scope.product[key];
-        }
-      }
-    }
-  };
-
-
-  // Fetch story using cormorant
-  $scope.fetchStory = function(url) {
-    cormorant.getStory(url, function(story) {
+function handleFetch(event) {
+  try {
+    new URL(urlToFetch.value);
+    cormorant.retrieveStory(urlToFetch.value, {}, (story) => {
       if(story) {
-        $scope.fetchedStory = JSON.stringify(story, null, "  ");
+        storyRaw.textContent = JSON.stringify(story, null, 2);
       }
       else {
-        $scope.fetchedStory = 'No JSON-LD representation of your product was found at the fetched URL.  Try again?';
+        storyRaw.textContent = 'Fetch did not return JSON-LD';
       }
     });
   }
+  catch(error) {
+    storyRaw.textContent = 'Not a valid URL.';
+  }
+}
 
-});
+
+function handleProduct(event) {
+  let story = {
+    "@context": {
+      "schema": "http://schema.org/"
+    },
+    "@graph": [
+      {
+        "@id": "product",
+        "@type": "schema:Product"
+      }
+    ]
+  };
+
+  if(productName.value) {
+    story["@graph"][0]["schema:name"] = productName.value;
+  }
+  if(productManufacturer.value) {
+    story["@graph"][0]["schema:model"] = productManufacturer.value;
+  }
+  if(productModel.value) {
+    story["@graph"][0]["schema:model"] = productModel.value;
+  }
+  if(productUrl.value) {
+    story["@graph"][0]["schema:url"] = productUrl.value;
+  }
+  if(productImageUrl.value) {
+    story["@graph"][0]["schema:image"] = productImageUrl.value;
+  }
+
+  productStory.textContent = JSON.stringify(story, null, 2);
+}
+
+
+handleProduct();

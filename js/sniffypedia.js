@@ -7,7 +7,7 @@
  */
 
 
-SNIFFYPEDIA_STORY = {
+const SNIFFYPEDIA_STORY = {
   "@context": {
     "schema": "http://schema.org/"
   },
@@ -20,60 +20,62 @@ SNIFFYPEDIA_STORY = {
     }
   ]
 };
+let selectedProtocol = ble;
 
 
-/**
- * sniffypedia Module
- * All of the JavaScript specific to the Sniffypedia is contained inside this
- * angular module.  The only external dependencies are:
- * - AngularUI Bootstrap
- * - cormorant (reelyActive)
- * - cuttlefish (reelyActive)
- */
-angular.module('sniffypedia', [ 'ui.bootstrap', 'reelyactive.cormorant',
-                                'reelyactive.cuttlefish' ])
+identifierSelect.addEventListener('change', updateIdentifierType);
+valueSelect.addEventListener('change', handleIdentifierSelection);
+searchName.addEventListener('input', handleSearch);
 
 
-/**
- * InteractionCtrl Controller
- * Handles the manipulation of all variables accessed by the HTML view.
- */
-.controller('InteractionCtrl', function($scope, cormorant) {
+// Update the identifier option values based on the selected identifier type
+function updateIdentifierType(event) {
+  identifierValues = selectedProtocol[identifierSelect.value];
+  valueSelect.innerHTML = '';
 
-  // Variables accessible in the HTML scope
-  $scope.index = sniffypedia_index;
-  $scope.protocol = 'Select protocol';
-  $scope.identifier = 'Select identifier';
-  $scope.value = 'Select value';
-  $scope.story = SNIFFYPEDIA_STORY;
-  $scope.things = compileThings($scope.index);
-  $scope.selectedUrl;
+  let optionsFragment = document.createDocumentFragment();
+  let option = document.createElement('option');
+  option.textContent = "Select";
+  option.selected = true;
 
-  // Return the array of "things" for typeahead
-  function compileThings(index) {
-    var things = [];
-    for(cProtocol in index) {
-      var protocol = index[cProtocol];
-      for(cIdentifier in protocol) {
-        var identifier = protocol[cIdentifier];
-        for(cValue in identifier) {
-          var thing = identifier[cValue];
-          if(things.indexOf(thing) < 0) {
-            things.push(thing);
-          }
+  optionsFragment.appendChild(option);
+
+  Object.entries(identifierValues).forEach(([key, value]) => {
+    option = document.createElement('option');
+    option.value = value;
+    option.textContent = key;
+    optionsFragment.appendChild(option);
+  });
+
+  valueSelect.appendChild(optionsFragment);
+}
+
+
+// Update the URL based on the selected identifier value
+function handleIdentifierSelection(event) {
+  selectedUrl.textContent = valueSelect.value;
+  selectedUrl.href = valueSelect.value;
+}
+
+
+// Update the URL based on the typed search
+function handleSearch(event) {
+  if(searchName.value.length >= 3) {
+    for(protocolName in sniffypedia_index) {
+      for(type in sniffypedia_index[protocolName]) {
+        let values = Object.values(sniffypedia_index[protocolName][type]);
+        let matches = values.filter(item => item.includes(searchName.value));
+
+        if(matches.length > 0) {
+          selectedUrl.textContent = matches[0];
+          selectedUrl.href = matches[0];
+          return;
         }
       }
     }
-    return things;
   }
+}
 
-  $scope.updateStory = function(url) {
-    delete $scope.story;
-    cormorant.getStory(url, function(story, url) {
-      $scope.story = story;
-      $scope.selectedUrl = url;
-      $scope.nameQuery = url;
-    });
-  };
 
-});
+updateIdentifierType();
+cuttlefishStory.render(SNIFFYPEDIA_STORY, storyRender);

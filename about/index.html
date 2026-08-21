@@ -1,79 +1,78 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
   <head>
     <title> About Sniffypedia </title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Why a Sniffypedia?  Why structured data?  Who initiated Sniffypedia and why?">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="../style/sniffypedia.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+          integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+          rel="stylesheet" crossorigin="anonymous">
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-3"></div>
-        <div class="col-md-6">
-          <h1 class="text-center"> About Sniffypedia </h1>
-          <h2> Why a Sniffypedia? <br>
-               <small> Identifiers without associations is like phone numbers without names </small> </h2>
-          <p> There are billions of devices that are radio-identifiable at a human scale.  Infrastructure can detect, identify and locate them in real time.  But what's the point of making "things" identifiable if you can't associate them with anything?  Sniffypedia associates identifiers with structured data about the products and organizations they represent, including links to websites, social media channels and images. </p>
-          <blockquote> <code>adabfb006e7d4601bda2bffaa68956ba</code> is as meaningless as an unknown phone number. <br> But when you know it's a Fitbit, meaningful context emerges. </blockquote>
+    <main class="container-fluid">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h1 class="text-center text-body-emphasis mt-5"> About Sniffypedia </h1>
+          <h2 class="mt-4"> Why a Sniffypedia? </h2>
+          <p class="lead text-body-secondary"> Identifiers without associations is like phone numbers without names </p> 
+          <p> There are hundreds of billions of devices that are radio-identifiable at a human scale.  Infrastructure can detect, identify and locate them in real time.  But what's the point of making "things" identifiable if you can't associate them with anything?  Sniffypedia associates identifiers with structured data about the products and organizations they represent, including links to websites, social media channels and images. </p>
+          <blockquote class="blockquote">
+            <p> <code class="text-break">adabfb006e7d4601bda2bffaa68956ba</code> is as meaningless as an unknown phone number. <br> But when you know it's a Fitbit, meaningful context emerges. </p>
+          </blockquote>
           <p> To the best of our knowledge, an open, collaborative database of these associations does not exist, hence the creation of Sniffypedia! </p>
-          <h2> Why structured data? <br>
-               <small> Organised, connected data helps machines understand our world </small> </h2>
+          <h2 class="mt-4"> Why structured data? </h2>
+          <p class="lead text-body-secondary"> Organised, connected data helps machines understand our world </p> 
           <p> The Internet of Things can be defined as computers understanding the physical world, without the need for human-entered data (<a href="https://youtu.be/A_Yct0r0uBg" target="_blank">video</a>).  With structured data about the every "thing" that's identifiable, technology becomes increasingly contextually aware, and can reduce inefficiencies and improve human experiences. </p>
-          <img src="../images/structured-data.png" class="img-responsive">
-          <p> Recently, <a href="https://developers.google.com/search/docs/guides/intro-structured-data" target="_blank">the major search engines have championed structured data</a> in the form of <a href="https://schema.org" target="_blank">Schema.org</a> and <a href="http://json-ld.org/" target="_blank">JSON-LD</a> as a standard means to represent and connect concepts from <i>people</i> to <i>events</i> to <i>products</i> and beyond.  Sniffypedia follows their lead. </p>
-          <h2> What's the metric for success? <br>
-               <small> This project will complete successfully when only one file remains </small> </h2>
+          <img src="../images/structured-data.png" class="img-fluid my-3" alt="Structured Data Visualization">
+          <p> Recently, <a href="https://developers.google.com/search/docs/guides/intro-structured-data" target="_blank">the major search engines have championed structured data</a> in the form of <a href="https://schema.org" target="_blank">Schema.org</a> and <a href="http://json-ld.org/" target="_blank">JSON-LD</a> as a standard means to represent and connect concepts from <i class="fst-italic">people</i> to <i class="fst-italic">events</i> to <i class="fst-italic">products</i> and beyond.  Sniffypedia follows their lead. </p>
+          <h2 class="mt-4"> What's the metric for success? </h2>
+          <p class="lead text-body-secondary"> This project will complete successfully when only one file remains </p> 
           <p> The heart of this project is <a href="https://github.com/reelyactive/sniffypedia/blob/gh-pages/js/index.js" target="_blank">index.js</a>: an exhaustive list of identifier and URL pairs.  Essentially, it's the phone book.  Ideally those URLs should point to the websites of the products and organizations associated with the identifiers.  But in the absence of structured data at those websites, the data is instead hosted as part of Sniffypedia on GitHub. </p>
           <p> The project will complete successfully when only the index.js file remains relevant.  Until then, maximising the number of "things" that can be associated and represented through this open, collaborative project is the key metric of success. </p>
-          <h2> Who initiated Sniffypedia and why? <br>
-               <small> At reelyActive we got tired of waiting for someone else to do it </small> </h2>
-          <div class="row">
-            <div class="col-md-10">
+          <h2 class="mt-4"> Who initiated Sniffypedia and why? </h2>
+          <p class="lead text-body-secondary"> At reelyActive we got tired of waiting for someone else to do it </p> 
+          <img src="../images/chickadee.png" class="float-end w-25 ps-2" alt="Chickadee Logo">
           <p> This project was initiated by <a href="http://reelyactive.com" target="_blank">reelyActive</a>.  In 2014 at the inaugural WearHacks hackathon, we "sniffed" for the first time a significant number of Bluetooth Low Energy devices, and spent the weekend coding their associations into our open source <a href="https://github.com/reelyactive/chickadee" target="_blank">chickadee</a> software package.  In 2015 <a href="http://www.slideshare.net/reelyActive/bluetooth-iot" target="_blank">we pitched the Bluetooth SIG about the need for such a project</a>.  We created the complementary <a href="http://reelyactive.github.io/advlib/" target="_blank">advlib</a> and <a href="http://ieeexplore.ieee.org/document/7389121/?reload=true&arnumber=7389121" target="_blank">published in the scientific community</a> (<a href="http://reelyactive.com/science/reelyActive-IoT2015.pdf" target="_blank">PDF</a>).  We also migrated to the structured data format described above. </p>
           <p> In late 2015 we made a feeble attempt at making Sniffypedia a Wiki, which we quickly abandoned.  And by 2016, with still no such project or standardisation in sight, and realising that GitHub pages were perfectly suited to the task, we finally motivated ourselves to initiate the Sniffypedia you see here, a key step towards <a href="http://www.reelyactive.com/context/" target="_blank">our vision of ubiquitous machine-contextual awareness</a>. </p>
-            </div>
-            <div class="col-md-2">
-              <img src="../images/chickadee.png" class="img-responsive">
-            </div>
-          </div>
-          <h2> Why is this hosted on GitHub? <br>
-               <small> As they say: "GitHub is how people build software" </small> </h2>
+          <h2 class="mt-4"> Why is this hosted on GitHub? </h2>
+          <p class="lead text-body-secondary"> As they say: "GitHub is how people build software" </p> 
           <p> Sniffypedia is currently hosted on GitHub, as the GitHub Pages branch of <a href="https://github.com/reelyactive/sniffypedia" target="_blank">reelyActive's sniffypedia repository</a>.  We made the decision to host on GitHub for two key reasons: </p>
           <ol>
-            <li> anyone can easily clone the entire Sniffypedia repository and use it for whatever purpose they require, both on a local server or in the cloud
-            <li> anyone can easily contribute associations and/or structured data via a pull request, encouraging continuous improvement
+            <li> anyone can easily clone the entire Sniffypedia repository and use it for whatever purpose they require, both on a local server or in the cloud </li>
+            <li> anyone can easily contribute associations and/or structured data via a pull request, encouraging continuous improvement </li>
           </ol>
           <p> Moreover, Sniffypedia uses CloudFlare's free CDN service for performance and security.  For details on implementation read their blog post <a href="https://blog.cloudflare.com/secure-and-fast-github-pages-with-cloudflare/" target="_blank">Secure and fast GitHub Pages with CloudFlare</a>. </p>
-          <h2> How is this licensed? <br>
-               <small> As freely and openly as possible </small> </h2>
+          <h2 class="mt-4"> How is this licensed? </h2>
+          <p class="lead text-body-secondary"> As freely and openly as possible </p> 
           <p> We selected what we felt were the most appropriate free and open licenses available.  Know of a license that's more appropriate, free and open?  Let the community know why you think so! </p>
-          <div class="well"> This Sniffypedia is made available under the Open Database License: <a href="http://opendatacommons.org/licenses/odbl/1.0/" target="_blank">http://opendatacommons.org/licenses/odbl/1.0/</a>.  Any rights in individual contents of the database are licensed under Creative Commons Attribution-ShareAlike 4.0 International: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">https://creativecommons.org/licenses/by-sa/4.0/</a> </div>
-          <h2> What's up with the logo? <br>
-               <small> Have a better idea for a logo? </small> </h2>
-          <p> The working logo of Sniffypedia is that of the "unknown radio device" from a reelyActive pitch deck dating back to the summer of 2013.  The relevant slides are below. Have a better idea for a logo?  This project is open to contributions! </p>
-          <div class="row">
-            <div class="col-md-7">
-              <img class="img-responsive"
-                   src="../images/working-logo-story.gif">
-            </div>
-            <div class="col-md-5">
-              <img class="img-responsive"
-                   src="../images/working-logo.png">
+          <div class="card bg-body-tertiary mb-4">
+            <div class="card-body">
+              This Sniffypedia is made available under the Open Database License: <a href="http://opendatacommons.org/licenses/odbl/1.0/" target="_blank">http://opendatacommons.org/licenses/odbl/1.0/</a>.  Any rights in individual contents of the database are licensed under Creative Commons Attribution-ShareAlike 4.0 International: <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">https://creativecommons.org/licenses/by-sa/4.0/</a>
             </div>
           </div>
-          <hr>
-          <p class="text-center">
-            <a href="../" class="btn btn-default">Home</a>
-            <a href="../contribute" class="btn btn-primary">Contribute</a> &nbsp;
-          </p>
+          <h2 class="mt-4"> What's up with the logo? </h2>
+          <p class="lead text-body-secondary"> Have a better idea for a logo? </p> 
+          <p> The working logo of Sniffypedia is that of the "unknown radio device" from a reelyActive pitch deck dating back to the summer of 2013.  The relevant slides are below. Have a better idea for a logo?  This project is open to contributions! </p>
+          <div class="row mt-3">
+            <div class="col-md-7">
+              <img class="img-fluid rounded mb-2" src="../images/working-logo-story.gif" alt="Logo Story">
+            </div>
+            <div class="col-md-5">
+              <img class="img-fluid rounded mb-2" src="../images/working-logo.png" alt="Sniffypedia Logo">
+            </div>
+          </div>
+          <div class="text-center my-5">
+            <a href="../" class="btn btn-outline-light me-2">Home</a>
+            <a href="../contribute" class="btn btn-primary">Contribute</a>
+          </div>
         </div>
-        <div class="col-md-3"></div>
       </div>
-    </div>
-    <footer class="footer">
-      <small> This Sniffypedia is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/.  Any rights in individual contents of the database are licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ </small>
+    </main>
+    <footer class="mt-auto py-3 bg-gradient text-center overflow-hidden">
+      <div class="container">
+        <p class="small text-body-tertiary mb-0"> This Sniffypedia is made available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" class="text-decoration-none">Open Database License</a>.<br>Any rights in individual contents of the database are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="text-decoration-none">Creative Commons Attribution-ShareAlike 4.0 International</a>. </p>
+      </div>
     </footer>
 
     <!-- Privacy-first web analytics with Cloudflare -->

@@ -1,20 +1,12 @@
-<!DOCTYPE HTML>
-<html>
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
   <head>
     <title> Sniffypedia </title>
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style/sniffypedia.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.0.2/ui-bootstrap-tpls.min.js"></script>
-		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular-animate.min.js"></script>
-    <link rel="stylesheet" href="style/bubble.css">
-    <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/sniffypedia.js"></script>
-    <script type="text/javascript" src="js/bubble.js"></script>
-    <script type="text/javascript" src="js/cormorant.js"></script>
-    <script type="text/javascript" src="js/cuttlefish.js"></script>
-    <script type="text/javascript" src="js/visualisation.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+          integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+          rel="stylesheet" crossorigin="anonymous">
 
     <!-- Metadata, the non-Schema/JSON-LD way. Inefficiencies. Yuck! -->
     <meta name="description" content="An open, collaborative repository of radio-identifiable (sniffable) things, represented as structured data.">
@@ -45,92 +37,74 @@
     }
     </script>
   </head>
-  <body ng-app="sniffypedia">
-    <div ng-controller="InteractionCtrl" class="container-fluid">
+  <body class="d-flex flex-column min-vh-100">
+    <main class="container-fluid flex-shrink-0">
       <div class="row">
         <div class="col-md-6">
-          <h1 class="text-center"> Sniffypedia </h1>
-          <p class="lead text-center"> An open, collaborative repository of radio-identifiable, or "sniffable", things, represented as structured data. </p>
-          <p class="text-justify"> There are billions of radio-identifiable "things" on our planet today, and there are billions more produced each year.  Many of these will <i>actively</i> emit an identifiable radio signal (<i>Active</i> RFID such as Bluetooth Low Energy advertise mode).  And even more will <i>passively</i> reflect an identifiable radio signal when excited by a reader (<i>Passive</i> RFID such as RAIN). </p>
-          <p class="text-justify"> The Sniffypedia project allows anyone to contribute information about the these "things" and their associated identifiers, not unlike <b>a phone book for the Internet of Things</b>.  Every "thing" is represented as structured data in the form of machine-readable Schema.org and JSON-LD as championed by the major search engines, and includes a human-readable HTML representation.  In future, we would expect product manufacturers to host such representations on their own servers at which point Sniffypedia would instead point to their URL. </p>
+          <h1 class="text-body-emphasis text-center mt-5"> Sniffypedia </h1>
+          <p class="lead text-body-secondary text-center"> An open, collaborative repository of radio-identifiable, or "sniffable", things, represented as structured data. </p>
+          <p> There are billions of radio-identifiable "things" on our planet today, and there are billions more produced each year.  Many of these will <i>actively</i> emit an identifiable radio signal (<i>Active</i> RFID such as Bluetooth Low Energy advertise mode).  And even more will <i>passively</i> reflect an identifiable radio signal when excited by a reader (<i>Passive</i> RFID such as RAIN). </p>
+          <p> The Sniffypedia project allows anyone to contribute information about the these "things" and their associated identifiers, not unlike <b>a phone book for the Internet of Things</b>.  Every "thing" is represented as structured data in the form of machine-readable Schema.org and JSON-LD as championed by the major search engines, and includes a human-readable HTML representation.  In future, we would expect product manufacturers to host such representations on their own servers at which point Sniffypedia would instead point to their URL. </p>
           <hr>
-          <h3> Search by identifier: </h3>
-          <div class="center-block">
-            <div class="btn-group" uib-dropdown>
-              <button id="select-protocol" type="button"
-                      class="btn btn-default" uib-dropdown-toggle>
-                {{protocol}} <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" uib-dropdown-menu role="menu"
-                  aria-labelledby="select-protocol">
-                <li role="menuitem" ng-repeat="(key, value) in index">
-                  <a ng-click="$parent.protocol = key"> {{key}} </a>
-                </li>
-              </ul>
+          <h3 class="mt-4"> Search by identifier: </h3>
+          <form class="row gy-2 gx-3 align-items-center">
+            <div class="col-auto">
+              <label for="protocolSelect" class="form-label">Protocol</label>
+              <select id="protocolSelect" class="form-select">
+                <option selected>Bluetooth Low Energy</option>
+              </select>
             </div>
-            <div class="btn-group" uib-dropdown>
-              <button id="select-identifier" type="button"
-                      class="btn btn-default" uib-dropdown-toggle>
-                {{identifier}} <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" uib-dropdown-menu role="menu"
-                  aria-labelledby="select-identifier">
-                <li role="menuitem"
-                    ng-repeat="(key, value) in index[protocol]">
-                  <a ng-click="$parent.identifier = key"> {{key}} </a>
-                </li>
-              </ul>
+            <div class="col-auto">
+              <label for="identifierSelect"
+                     class="form-label">Identifier Type</label>
+              <select id="identifierSelect" class="form-select">
+                <option selected value="companyIdentifiers">Company</option>
+                <option value="uuid16">UUID-16</option>
+                <option value="uuid128">UUID-128</option>
+                <option value="iBeacons">iBeacon UUID</option>
+              </select>
             </div>
-            <div class="btn-group" uib-dropdown>
-              <button id="select-value" type="button"
-                      class="btn btn-default" uib-dropdown-toggle>
-                {{value}} <span class="caret"></span>
-              </button>
-              <ul class="dropdown-menu" uib-dropdown-menu role="menu"
-                  aria-labelledby="select-value">
-                <li role="menuitem"
-                    ng-repeat="(key, value) in index[protocol][identifier]">
-                  <a ng-click="$parent.value = key;
-                               updateStory(index[protocol][identifier][key])">
-                    {{key}}
-                  </a>
-                </li>
-              </ul>
+            <div class="col-auto">
+              <label for="valueSelect"
+                     class="form-label">Identifier Value</label>
+              <select id="valueSelect" class="form-select font-monospace">
+                <option selected>Loading...</option>
+              </select>
             </div>
-          </div>
-          <h3> Search by name: </h3>
-          <input type="text" class="form-control"
-                 placeholder="Start typing the name of some thing"
-                 uib-typeahead="thing for thing in things | filter:$viewValue |
-                                limitTo:8" ng-model="nameQuery"
-                 typeahead-on-select="updateStory($item)">
+          </form>
+          <h3 class="mt-4"> Search by name: </h3>
+          <input id="searchName" type="text" class="form-control"
+                 placeholder="Start typing the name of some thing">
           <hr>
-          <div class="well text-center"
-               ng-show="selectedUrl">
-            <a class="lead" ng-href="{{selectedUrl}}" target="_blank">
-              {{selectedUrl}} </a>
+          <div class="card bg-body-secondary my-5">
+            <div class="card-body text-center">
+              <a id="selectedUrl" href="" target="_blank"></a>
+            </div>
           </div>
           <p> The Sniffypedia source is available <a href="https://github.com/reelyactive/sniffypedia" target="_blank">via GitHub</a> and the index is available <a href="https://www.npmjs.com/package/sniffypedia" target="_blank">via npmjs</a>. </p>
           <p class="text-center">
-            <a href="contribute" class="btn btn-default">Contribute</a> &nbsp;
-            <a href="about" class="btn btn-primary">About</a>
+            <a href="contribute" class="btn btn-primary me-2">Contribute</a>
+            <a href="about" class="btn btn-secondary">About</a>
           </p>
         </div>
-        <div class="col-md-6 bubble-background">
-          <div class="bubble-container">
-            <bubble ng-if="story" json="story" size="240px" toggle="false">
-            </bubble>
-          </div>
+        <div class="col-md-6">
+          <div id="storyRender" class="w-75 my-5 mx-auto"></div>
         </div>
       </div>
-    </div>
-    <footer class="footer">
-      <small> This Sniffypedia is made available under the Open Database License: http://opendatacommons.org/licenses/odbl/1.0/.  Any rights in individual contents of the database are licensed under Creative Commons Attribution-ShareAlike 4.0 International: https://creativecommons.org/licenses/by-sa/4.0/ </small>
+    </main>
+    <footer class="mt-auto py-3 bg-gradient text-center overflow-hidden">
+      <div class="container">
+        <p class="small text-body-tertiary mb-0"> This Sniffypedia is made available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" class="text-decoration-none">Open Database License</a>.<br>Any rights in individual contents of the database are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="text-decoration-none">Creative Commons Attribution-ShareAlike 4.0 International</a>. </p>
+      </div>
     </footer>
 
     <!-- Privacy-first web analytics with Cloudflare -->
     <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
             data-cf-beacon='{"token": "c5291e68db1d4ba9862affb85120a8b4"}'>
     </script>
+    <script src="../js/cormorant.js"></script>
+    <script src="../js/cuttlefish-story.js"></script>
+    <script src="../js/index.js"></script>
+    <script src="../js/sniffypedia.js"></script>
   </body>
 </html>

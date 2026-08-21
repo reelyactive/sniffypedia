@@ -9,7 +9,7 @@
 
 // Bluetooth Low Energy 16-bit UUIDs
 // See: https://www.bluetooth.com/specifications/assigned-numbers/16-bit-uuids-for-members
-var ble_uuid16 = {
+const ble_uuid16 = {
   "fefd": "Organization/Gimbal_Inc/",
   "fefc": "Organization/Gimbal_Inc/",
   "fefa": "Organization/PayPal_Inc/",
@@ -192,7 +192,7 @@ var ble_uuid16 = {
 
 
 // Bluetooth Low Energy 128-bit UUIDs
-var ble_uuid128 = {
+const ble_uuid128 = {
   "1c930001d45911e79296b8e856369374": "Product/Sensor-Works_BluVib",
   "52052c11e701478299f58ce88dbb1500": "Product/Allegion_ENGAGE/",
   "6e400001b5a3f393e0a9e50e24dcca9e": "Organization/Nordic_Semiconductor_ASA/",
@@ -213,7 +213,7 @@ var ble_uuid128 = {
 
 // Bluetooth Low Energy company identifiers
 // See:https://www.bluetooth.com/specifications/assigned-numbers/company-identifiers
-var ble_companyIdentifiers = {
+const ble_companyIdentifiers = {
   "0001": "Organization/Nokia/",
   "0003": "Organization/IBM_Corporation/",
   "0004": "Organization/Toshiba_Corporation/",
@@ -298,7 +298,7 @@ var ble_companyIdentifiers = {
 
 
 // Bluetooth Low Energy iBeacons (128-bit UUIDs)
-var ble_iBeacons = {
+const ble_iBeacons = {
   "07775dd0111b11e491910800200c9a66": "Product/XY-Findables_Beacon/",
   "0d60a2892039442198216b12c4274890": "Product/Bluetooth_World_2017_Beacon/",
   "2f234454cf6d4a0fadf2f4911ba9ffa6": "Product/Radius-Networks_Beacon/",
@@ -317,7 +317,7 @@ var ble_iBeacons = {
 };
 
 // Bluetooth Low Energy
-var ble = {
+const ble = {
   uuid16: ble_uuid16,
   uuid128: ble_uuid128,
   companyIdentifiers: ble_companyIdentifiers,
@@ -326,9 +326,6 @@ var ble = {
 
 
 // The Sniffypedia index
-var sniffypedia_index = {
+const sniffypedia_index = {
   ble: ble
 };
-
-
-module.exports.index = sniffypedia_index;
