@@ -28,12 +28,20 @@
     <!-- Metadata, the Schema/JSON-LD way. Yay! -->
     <script type="application/ld+json">
     {
-      "@context": "http://schema.org",
+      "@context": "https://schema.org",
       "@type": "Dataset",
+      "@id": "https://sniffypedia.org/#dataset",
       "name": "Sniffypedia",
       "url": "https://sniffypedia.org/",
-      "creator": "http://www.reelyactive.com",
-      "image": "https://sniffypedia.org/images/social-share.png"
+      "creator": {
+        "@type": "Organization",
+        "@id": "https://www.reelyactive.com/#organization",
+        "url": "https://www.reelyactive.com"
+      },
+      "image": "https://sniffypedia.org/images/social-share.png",
+      "sameAs": [
+        "https://www.npmjs.com/package/sniffypedia",
+      ]
     }
     </script>
   </head>
