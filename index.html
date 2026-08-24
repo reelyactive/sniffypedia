@@ -47,8 +47,11 @@
   </head>
   <body class="d-flex flex-column min-vh-100">
     <main class="container-fluid flex-shrink-0">
-      <div class="row">
-        <div class="col-md-6">
+      <div class="row justify-content-evenly">
+        <div class="col-md-10 col-xl-8 col-xxl-4 order-xxl-last">
+          <div id="storyRender" class="w-75 mt-5 mb-3 mx-auto"></div>
+        </div>
+        <div class="col-md-10 col-xl-8 col-xxl-6">
           <h1 class="text-body-emphasis text-center mt-5"> Sniffypedia </h1>
           <p class="lead text-body-secondary text-center"> An open, collaborative repository of radio-identifiable, or "sniffable", things, represented as structured data. </p>
           <p> There are billions of radio-identifiable "things" on our planet today, and there are billions more produced each year.  Many of these will <i>actively</i> emit an identifiable radio signal (<i>Active</i> RFID such as Bluetooth Low Energy advertise mode).  And even more will <i>passively</i> reflect an identifiable radio signal when excited by a reader (<i>Passive</i> RFID such as RAIN). </p>
@@ -93,13 +96,10 @@
           </div>
           <hr>
           <p> The Sniffypedia source is available <a href="https://github.com/reelyactive/sniffypedia" target="_blank">via GitHub</a> and the index is available <a href="https://www.npmjs.com/package/sniffypedia" target="_blank">via npmjs</a>. </p>
-          <p class="text-center">
+          <p class="text-center mb-5">
             <a href="contribute" class="btn btn-primary me-2">Contribute</a>
             <a href="about" class="btn btn-secondary">About</a>
           </p>
-        </div>
-        <div class="col-md-6">
-          <div id="storyRender" class="w-75 my-5 mx-auto"></div>
         </div>
       </div>
     </main>
