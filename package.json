@@ -21,6 +21,9 @@
     "node": ">=6.0.0"
   },
   "main": "./lib/sniffypedia.js",
+  "scripts": {
+    "lookup": "node bin/lookup"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/reelyactive/sniffypedia.git"

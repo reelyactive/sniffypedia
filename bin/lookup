@@ -1,0 +1,73 @@
+#!/usr/bin/env node
+
+const https = require('https');
+const http = require('http');
+
+
+// Expect a URL as argument
+if(process.argv.length <= 2) {
+  return console.log('Include a valid URL to lookup as argument');
+}
+
+// Fetch the given URL and output any JSON-LD found in the HTML
+fetchUrl(process.argv[2], (error, data) => {
+  if(error) {
+    console.log(error.message);
+    process.exit(1);
+  }
+
+  let items = parseJsonLd(data);
+
+  console.log('Found', items.length, 'entries:\r\n');
+  items.forEach((item) => { console.log(item, '\r\n'); });
+});
+
+
+/**
+ * GET the given URL.
+ * @param {String} url
+ * @param {function} callback
+ */
+function fetchUrl(url, callback) {
+  const protocol = url.startsWith('https') ? https : http;
+
+  protocol.get(url, (res) => {
+    if((res.statusCode < 200) || (res.statusCode >= 300)) {
+      return callback(new Error('Request failed with code: ' + res.statusCode));
+    }
+
+    let data = '';
+    res.setEncoding('utf8');
+
+    res.on('data', (chunk) => { data += chunk; });
+    res.on('end', () => { callback(null, data); });
+
+  }).on('error', (err) => {
+    callback(err);
+  });
+}
+
+
+/**
+ * Extract and parse JSON-LD using regular expressions.
+ * @param {String} data
+ * @returns {Array}
+ */
+function parseJsonLd(data) {
+  const regex = /<script[^>]*type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi;
+  let results = [];
+  let match;
+
+  while((match = regex.exec(data)) !== null) {
+    let content = match[1].trim();
+    try {
+      let json = JSON.parse(content);
+      results.push(json);
+    }
+    catch(error) {
+      console.log('Invalid JSON found within application/ld+json tags!');
+    }
+  }
+
+  return results;
+}
