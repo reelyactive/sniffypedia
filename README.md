@@ -55,6 +55,16 @@ The Sniffypedia index includes:
 | 'ble'    | 'uuid16'            | [16-bit Bluetooth-assigned UUIDs for members](https://www.bluetooth.com/specifications/assigned-numbers/16-bit-uuids-for-members) |
 
 
+Lookup JSON-LD
+--------------
+
+A script is provided to facilitate the lookup of JSON-LD from a given URL.  From the root of this repository, run the following command with a given URL, for instance, that of Sniffypedia:
+
+    npm run lookup https://sniffypedia.org
+
+The script will attempt to GET the URL, extract any entries within `<script type="application/ld+json"></script>` tags and print these to the console.
+
+
 Project History
 ---------------
 
