@@ -83,12 +83,15 @@
           <h3 class="mt-4"> Search by name: </h3>
           <input id="searchName" type="text" class="form-control"
                  placeholder="Start typing the name of some thing">
-          <hr>
-          <div class="card bg-body-secondary my-5">
-            <div class="card-body text-center">
-              <a id="selectedUrl" href="" target="_blank"></a>
+          <div id="searchResult" hidden>
+            <h3 class="mt-4"> Search result: </h3>
+            <div class="card border-success bg-body-tertiary bg-gradient">
+              <div class="card-body text-center">
+                <a id="selectedUrl" href="" target="_blank"></a>
+              </div>
             </div>
           </div>
+          <hr>
           <p> The Sniffypedia source is available <a href="https://github.com/reelyactive/sniffypedia" target="_blank">via GitHub</a> and the index is available <a href="https://www.npmjs.com/package/sniffypedia" target="_blank">via npmjs</a>. </p>
           <p class="text-center">
             <a href="contribute" class="btn btn-primary me-2">Contribute</a>

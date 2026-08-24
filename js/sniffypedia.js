@@ -55,6 +55,7 @@ function updateIdentifierType(event) {
 function handleIdentifierSelection(event) {
   selectedUrl.textContent = valueSelect.value;
   selectedUrl.href = valueSelect.value;
+  searchResult.hidden = false;
 }
 
 
@@ -69,6 +70,7 @@ function handleSearch(event) {
         if(matches.length > 0) {
           selectedUrl.textContent = matches[0];
           selectedUrl.href = matches[0];
+          searchResult.hidden = false;
           return;
         }
       }
