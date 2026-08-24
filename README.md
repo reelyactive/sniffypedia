@@ -8,6 +8,16 @@ Radio-identifiable things, like Bluetooth Low Energy devices, RAIN RFID tags, an
 The project was started in 2016 ([press release](https://www.reelyactive.com/press/release-160829/)), following the SEO-motivated adoption of structured, linked data embedded in webpages in the form of Schema.org and JSON-LD (which became a W3C recommendation in 2014).  This meant that software could fetch the webpage associated with some thing and expect to find a standard representation of at least the name and image associated with the organisation, product or service.
 
 
+AI disclosure and tooling
+-------------------------
+
+This project is maintained by human developers.  Beginning in 2026, development has been assisted by the following Artificial Intelligence models and tools:
+- [Gemma 4](https://deepmind.google/models/gemma/gemma-4/)
+- [opencode](https://opencode.ai/)
+
+All AI-assisted development by reelyActive has been executed using open models running locally on resource-efficient hardware.
+
+
 License
 -------
 
