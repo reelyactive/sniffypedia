@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <title> Sniffypedia 10 years on </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A look at the state of the IoT and the Semantic Web on the occasion of Sniffypedia's tenth anniversary.">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css"
+          integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA=="
+          rel="stylesheet" crossorigin="anonymous">
+  </head>
+  <body class="d-flex flex-column min-vh-100">
+    <main class="container-fluid flex-shrink-0">
+      <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-10 col-lg-8 col-xl-6">
+          <h1 class="text-center text-body-emphasis mt-5"> Sniffypedia, 10 years on&hellip; </h1>
+          <p class="text-center text-body-tertiary"> On August 29<sup>th</sup>, 2026, Sniffypedia celebrated its 10<sup>th</sup> anniversary. </p>
+          <h2 class="mt-4"> Back in 2016&hellip; </h2>
+          <p class="lead text-body-secondary"> So many <em>things</em>, so many opportunities! </p>
+          <p> By 2016, radio-identifiable <em>things</em> had become a part of everyday life.  <strong>Bluetooth Low Energy (BLE)</strong> found its way into our smartphones, catalysing a whirlwind of wearables and the beacons boom.  A single BLE gateway might detect hundreds of devices within its human-scale range of tens of metres at any given time. </p>
+          <figure class="figure">
+            <img src="../images/smartspaces-2016.png"
+                 class="figure-img img-fluid rounded" alt="Smart Spaces (2016)">
+            <figcaption class="figure-caption text-end"> Screenshot from reelyActive Smart Spaces circa 2016, <em>before</em> Sniffypedia </figcaption>
+          </figure>
+          <p> <em class="text-body-emphasis">What were all these things?</em>&nbsp;  Fortunately, Bluetooth has well-documented <a href="https://www.bluetooth.com/specifications/assigned-numbers/" target="_blank">assigned numbers</a> for manufacturer-specific data and member services, which many of these <em>things</em> included in their payloads.  <strong class="font-monospace">0x004c</strong>?  That's Apple's company code.  <strong class="font-monospace">0xfeed</strong>?  That's Tile's service UUID.  <strong class="font-monospace">0xfeaa</strong>?  That's Google's Eddystone service which, among other things, allows any<em>thing</em> to advertise a short URL for any<em>thing</em> in range to look up. </p>
+          <p> Speaking of Google and looking things up via URL, by 2016, search engines were promoting <a href="https://json-ld.org/" target="_blank">JSON-LD</a> &amp; <a href="https://schema.org/" target="_blank">Schema.org</a> as a standard means of embedding structured data in a web page to enrich search results.  Perhaps it would become possible at scale to simply associate radio-identifiers with URLs and look up at least the name and image of the corresponding <a href="https://schema.org/Organization" target="_blank">Organization</a>, <a href="https://schema.org/Product" target="_blank">Product</a> or <a href="https://schema.org/Service" target="_blank">Service</a>?  That was <a href="https://www.reelyactive.com" target="_blank">reelyActive</a>'s founding premise for <strong class="text-body-emphasis">Sniffypedia</strong>: we might need to seed the structured data for a while, but eventually the project would simply become an index that maps identifiers to URLs! </p>
+          <div class="row mt-4">
+            <div class="col-lg-6">
+              <ul class="list-group list-group-flush mx-4 mb-3">
+                <li class="list-group-item active" aria-current="true">
+                  <span class="font-monospace">0x004c</span>
+                  &mdash; www.apple.com
+                </li>
+                <li class="list-group-item">
+                  <span class="font-monospace">0xfeed</span>
+                  &mdash; www.tile.com
+                </li>
+                <li class="list-group-item">
+                  <span class="font-monospace">0xfeaa</span>
+                  &mdash; github.com/google/eddystone
+                </li>
+                <li class="list-group-item">
+                  <span class="font-monospace">etc.</span>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <pre class="mx-4 mb-3">{
+  "@context": "https://schema.org",
+  "@id": "https://www.apple.com/#organization",
+  "@type": "Organization",
+  <span class="text-primary">"name": "Apple"</span>,
+  <span class="text-primary">"logo": "https://www.apple.com/..."</span>,
+  ...
+}</pre>
+            </div>
+          </div>
+          <h2 class="mt-4"> What's the big idea anyway? </h2>
+          <p class="lead text-body-secondary"> Physical spaces that put <em>things</em> in context. </p>
+          <p> The big idea, in two words, is <a href="https://www.reelyactive.com/context/" target="_blank">Hyperlocal Context</a>.  It becomes possible to automatically <strong class="text-body-emphasis">identify</strong>, <strong class="text-body-emphasis">sense</strong> and <strong class="text-body-emphasis">locate</strong> all these <em>things</em> at a human scale, in <em>any</em> physical space. </p>
+          <p> Consider the following example in retail, which was a promising vertical in 2016: </p>
+          <ol class="text-body-secondary">
+            <li> the apparel item in the size and model you're looking for is associated with a RFID tag <span class="text-body-emphasis">identifier</span> </li>
+            <li> the item is <span class="text-body-emphasis">located</span> in real-time using RFID reader infrastructure </li>
+            <li> the <span class="text-body-emphasis">nearest</span> available changing room is <span class="text-body-emphasis">sensed</span> using a BLE occupancy sensor </li>
+          </ol>
+          <p> Now imagine that example scaled to every physical space, enabling a <a href="https://blog.reelyactive.com/2016/01/12/the-pervasive-sharing-economy/" target="_blank">Pervasive Sharing Economy</a>.  It was perfectly possible as at <a href="https://www.reelyactive.com" target="_blank">reelyActive</a> we had developed <a href="https://reelyactive.github.io/" target="_blank">open source technologies</a> that could not only <strong class="text-body-emphasis">identify</strong> all wireless devices in a space and interpret any <strong class="text-body-emphasis">sensor</strong> data, but also <strong class="text-body-emphasis">locate</strong> those same devices: we were pioneers of <a href="https://blog.reelyactive.com/2017/03/18/byod-rtls/" target="_blank">BYOD RTLS</a>. </p>
+          <p> There was cause for optimism: Google's <a href="https://google.github.io/physical-web/" target="_blank">Physical Web</a> gave a taste of what might be possible when anything can "advertise" its digital twin to anyone or anything in close proximity.  We used it to demonstrate how to <a href="https://blog.reelyactive.com/2017/02/01/advertise-yourself-with-the-physical-web-and-beyond/" target="_blank">"Advertise" yourself</a> in any physical space, observing the same standard structured data principles <small class="text-body-secondary">(for a <a href="https://schema.org/Person" target="_blank">Person</a>).</small>  Moreover Hyperlocal Context wouldn't depend on smartphones as <a href="https://blog.reelyactive.com/2017/11/17/light-hears-ahead-of-its-time/" target="_blank">ubiquitous radio-decoding infrastructure</a> was on the horizon. </p>
+          <p> From 2016 onward, we would routinely discover new <em>things</em>, look them up, and add them to Sniffypedia. </p>
+          <h2 class="mt-4"> The big anniversary idea </h2>
+          <p class="lead text-body-secondary"> Let's complete the index using AI! </p>
+          <p> Fast-forward to 2026, and as of August, there are: </p>
+          <ul>
+            <li> approximately <span class="font-monospace">0x110d</span> or <strong>4,365</strong> company identifiers registered with the Bluetooth SIG </li>
+            <li> approximately <strong>726</strong> member services registered with the Bluetooth SIG </li>
+          </ul>
+          <p> Manually updating Sniffypedia is tedious, and new registrations for BLE alone have long outpaced what can be reasonably expected for a side project.  Might we use Sniffypedia's tenth anniversary as an occasion to <strong>adapt the project to AI-assisted contributions</strong> and <strong>revisit/reinforce current standards</strong>?  After all, <a href="https://blog.reelyactive.com/2026/08/01/one-four-the-reckoning/" target="_blank">AI and standards are two of the three key factors we identified for reelyActive's year ahead</a>. </p>
+          <p> Indeed, we used opencode and a LLM<em>&mdash;running locally on modest resources&mdash;</em>to update all of the Sniffypedia pages to the latest <a href="https://getbootstrap.com/" target="_blank">Bootstrap 5</a> and Vanilla JS paradigm, maintaining a coding style that's easily human readable.  However, when it came to updating the Sniffypedia index to simply point at Organization/Product/Service web pages, we realised there were problems that no AI could overcome&hellip; </p>
+          <h2 class="mt-4"> Might need a new metric </h2>
+          <p class="lead text-body-secondary"> "SEO what" if structured data isn't accessible on the Web! </p> 
+          <p> Remember SEO <small class="text-body-secondary">(Search Engine Optimisation)</small>?  Well we naively believed that in 2026, the majority of companies would have <em>useful</em> structured data on their websites in the form of JSON-LD & Schema.org accessible to <em>all</em> users of the web.  <strong>Nope!</strong> </p>
+          <p> We had planned to hand off the daunting task of looking up each organisation's URL and any embedded structured data to AI agents, but alas, looking at the early results, which we manually validated<sup>*</sup>, we found&hellip; </p>
+          <div class="row row-cols-1 row-cols-lg-2 g-4 mb-4">
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header text-bg-warning text-center">
+                  <span class="badge rounded-pill text-bg-light"> 1 </span>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title"> No <span class="text-body-emphasis">structured</span> data! </h3>
+                  <p class="card-text text-body-secondary"> Perhaps a third of sites we checked had no embedded structured data to extract. </p>
+                </div>
+                <div class="card-footer small text-body-secondary text-end">
+                  Just say no to SEO. &#x1f645;
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header text-bg-warning text-center">
+                  <span class="badge rounded-pill text-bg-light"> 2 </span>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title"> Nothing <span class="text-body-emphasis">relevant</span>! </h3>
+                  <p class="card-text text-body-secondary"> Perhaps a third of sites with structured data that we checked had no Organization, Product or Service type(s), just WebSite and/or WebPage for SEO. </p>
+                </div>
+                <div class="card-footer small text-body-secondary text-end">
+                  S-E-Only? &#x1f937;
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header text-bg-warning text-center">
+                  <span class="badge rounded-pill text-bg-light"> 3 </span>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title"> Forbidden <span class="text-body-emphasis">403</span>! </h3>
+                  <p class="card-text text-body-secondary"> A significant number of sites forbade access (and hence data) to Node.js code running server-side. </p>
+                </div>
+                <div class="card-footer small text-body-secondary text-end">
+                  No data 4xx you! &#x1f6ab;
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card h-100">
+                <div class="card-header text-bg-warning text-center">
+                  <span class="badge rounded-pill text-bg-light"> 4 </span>
+                </div>
+                <div class="card-body">
+                  <h3 class="card-title"> Denied by <span class="text-body-emphasis">CORS</span>! </h3>
+                  <p class="card-text text-body-secondary"> Without exception, third-party sites implemented CORS policies denying access to JavaScript running client-side (in the browser). </p>
+                </div>
+                <div class="card-footer small text-body-secondary font-monospace text-end">
+                  Access-Control-Allow-Origin: 0 &#x2b50;
+                </div>
+              </div>
+            </div>
+          </div>
+          <p> Given that structured data is not always present, relevant or accessible, cleary the metric of success has changed. </p>
+          <figure class="text-center">
+            <blockquote class="blockquote">
+              <p> "The project will complete successfully when only the index.js file remains relevant." </p>
+            </blockquote>
+            <figcaption class="blockquote-footer">
+              Original metric of success for Sniffypedia
+            </figcaption>
+          </figure>
+          <p> For software applications that require reliable access to relevant structured data about common radio-identifiable <em>things</em>, Sniffypedia's hosted content remains perhaps the only option on the Web! </p>
+          <p class="small text-body-tertiary text-end"> <sup>*</sup> Side note: we found that the HTML files of modern webpages are <em>not</em> readily human-readable.  Nonetheless, we at reelyActive strive to write human-maintanable HTML for our own projects, including Sniffypedia. </p>
+          <h2 class="mt-4"> So, what's next? </h2>
+          <p class="lead text-body-secondary"> In 2026, the answer to everything is AI, right? </p> 
+          <p> As long as <strong class="text-body-emphasis">Sniffypedia</strong> continues to serve a purpose, which is the case even after ten years, it should continue to be maintained.  Moving forward, <strong class="text-body-emphasis">Sniffypedia</strong> is better designed to accepted AI-assisted contributions, facilitating the addition of new content while freeing up the human maintainers to invest their time in more specialised activities. </p>
+          <p> The European <a href="https://single-market-economy.ec.europa.eu/single-market/digital-product-passport" target="_blank">Digital Product Passport</a><em>&mdash;which at the time of writing has just become operational&mdash;</em>may one day provide ample structured data about Products, Services and any implicated Organizations.  But at the current pace of roll-out, <strong class="text-body-emphasis">Sniffypedia</strong> may well still be relevant when it comes time to again look back, 15 years on&hellip; </p>
+          <div class="text-center my-5">
+            <a href="../" class="btn btn-outline-light me-2">Home</a>
+            <a href="../about" class="btn btn-primary">About</a>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="mt-auto py-3 bg-gradient text-center overflow-hidden">
+      <div class="container">
+        <p class="small text-body-tertiary mb-0"> This Sniffypedia is made available under the <a href="https://opendatacommons.org/licenses/odbl/1-0/" target="_blank" class="text-decoration-none">Open Database License</a>.<br>Any rights in individual contents of the database are licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank" class="text-decoration-none">Creative Commons Attribution-ShareAlike 4.0 International</a>. </p>
+      </div>
+    </footer>
+
+    <!-- Privacy-first web analytics with Cloudflare -->
+    <script defer src='https://static.cloudflareinsights.com/beacon.min.js'
+            data-cf-beacon='{"token": "c5291e68db1d4ba9862affb85120a8b4"}'>
+    </script>
+  </body>
+</html>
