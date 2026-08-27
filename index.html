@@ -27,7 +27,7 @@
 
     <!-- Metadata, the Schema/JSON-LD way. Yay! -->
     <script type="application/ld+json">
-    {
+    [{
       "@context": "https://schema.org",
       "@type": "Dataset",
       "@id": "https://sniffypedia.org/#dataset",
@@ -42,7 +42,17 @@
       "sameAs": [
         "https://www.npmjs.com/package/sniffypedia",
       ]
-    }
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Sniffypedia",
+        "item": "https://sniffypedia.org"
+      }]
+    }]
     </script>
   </head>
   <body class="d-flex flex-column min-vh-100">
