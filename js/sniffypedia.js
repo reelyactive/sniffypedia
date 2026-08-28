@@ -20,6 +20,19 @@ const SNIFFYPEDIA_STORY = {
     }
   ]
 };
+const SNIFFYPEDIA_ANNIVERSARY_STORY = {
+  "@context": {
+    "schema": "http://schema.org/"
+  },
+  "@graph": [
+    {
+      "@id": "product",
+      "@type": "schema:Product",
+      "schema:name": "Sniffypedia turns 10!",
+      "schema:image": "https://sniffypedia.org/images/logo-anniversary-10.png"
+    }
+  ]
+};
 let selectedProtocol = ble;
 
 
@@ -80,4 +93,4 @@ function handleSearch(event) {
 
 
 updateIdentifierType();
-cuttlefishStory.render(SNIFFYPEDIA_STORY, storyRender);
+cuttlefishStory.render(SNIFFYPEDIA_ANNIVERSARY_STORY, storyRender);
