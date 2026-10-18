@@ -138,6 +138,7 @@ const ble_uuid16 = {
   "fd69": "Organization/Samsung/",
   "fd63": "Product/Fitbit_Wearable/",
   "fd62": "Product/Fitbit_Wearable/",
+  "fd5c": "Organization/React_Mobile_Inc/",
   "fd5a": "Organization/Samsung/",
   "fd59": "Organization/Samsung/",
   "fd4b": "Organization/Samsung/",
@@ -293,6 +294,7 @@ const ble_companyIdentifiers = {
   "0819": "Organization/Hunter_Douglas/",
   "0a62": "Organization/MOKO_Technology_Ltd/",
   "0adb": "Organization/Reelables_Inc/",
+  "0b6e": "Organization/React_Mobile_Inc/",
   "1040": "Organization/Raspberry_Pi/"
 };
 
