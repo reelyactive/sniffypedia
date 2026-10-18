@@ -309,7 +309,8 @@ const ble_companyIdentifiers = {
   "0a62": "Organization/MOKO_Technology_Ltd/",
   "0adb": "Organization/Reelables_Inc/",
   "0b6e": "Organization/React_Mobile_Inc/",
-  "1040": "Organization/Raspberry_Pi/"
+  "1040": "Organization/Raspberry_Pi/",
+  "10f0": "Organization/4id_Solutions/"
 };
 
 
