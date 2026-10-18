@@ -10,6 +10,7 @@
 // Bluetooth Low Energy 16-bit UUIDs
 // See: https://www.bluetooth.com/specifications/assigned-numbers/16-bit-uuids-for-members
 const ble_uuid16 = {
+  "fefe": "Organization/GN_Hearing_AS/",
   "fefd": "Organization/Gimbal_Inc/",
   "fefc": "Organization/Gimbal_Inc/",
   "fefa": "Organization/PayPal_Inc/",
@@ -134,6 +135,7 @@ const ble_uuid16 = {
   "fd7e": "Organization/Samsung/",
   "fd7c": "Organization/Toshiba_Corporation/",
   "fd72": "Organization/Logitech_International_SA/",
+  "fd71": "Organization/GN_Hearing_AS/",
   "fd6f": "Service/Contact_Tracing/",
   "fd6c": "Organization/Samsung/",
   "fd69": "Organization/Samsung/",
@@ -153,6 +155,7 @@ const ble_uuid16 = {
   "fd2a": "Organization/Sony_Corporation/",
   "fd22": "Organization/Huawei_Technologies_Co_Ltd/",
   "fd21": "Organization/Huawei_Technologies_Co_Ltd/",
+  "fd20": "Organization/GN_Hearing_AS/",
   "fd1d": "Organization/Samsung/",
   "fd03": "Organization/Quuppa_Oy/",
   "fd02": "Organization/LEGO_System/",
@@ -234,6 +237,7 @@ const ble_companyIdentifiers = {
   "0077": "Organization/Laird_Connectivity/",
   "0078": "Organization/Nike_Inc/",
   "0087": "Organization/Garmin_International/",
+  "0089": "Organization/GN_Hearing_AS/",
   "008a": "Organization/Jawbone/",
   "008c": "Organization/Gimbal_Inc/",
   "009e": "Organization/Bose_Corporation/",
