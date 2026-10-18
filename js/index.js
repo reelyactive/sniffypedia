@@ -289,6 +289,7 @@ const ble_companyIdentifiers = {
   "03c2": "Organization/Snapchat_Inc/",
   "03da": "Organization/EnOcean_GmbH/",
   "0409": "Organization/RYSE_Inc/",
+  "044d": "Organization/VEGA_Grieshaber_KG/",
   "0499": "Organization/Ruuvi_Innovations_Ltd/",
   "0500": "Organization/Wiliot_Ltd/",
   "0505": "Organization/InPlay_Inc/",
