@@ -303,6 +303,7 @@ const ble_companyIdentifiers = {
   "0757": "Organization/ELA_Innovation_SA/",
   "075b": "Organization/Smart_Sensor_Devices_AB/",
   "0819": "Organization/Hunter_Douglas/",
+  "08aa": "Organization/SZ_DJI_Technology_Co_Ltd/",
   "0941": "Organization/Rivian_Automotive_LLC/",
   "0a62": "Organization/MOKO_Technology_Ltd/",
   "0adb": "Organization/Reelables_Inc/",
