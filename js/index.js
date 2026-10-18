@@ -268,6 +268,7 @@ const ble_companyIdentifiers = {
   "0180": "Organization/Gigaset_Communications_GmbH/",
   "0195": "Organization/Zuli_Inc/",
   "0199": "Organization/Salto_Systems/",
+  "01a9": "Organization/Canon_Inc/",
   "01ab": "Organization/Facebook_Inc/",
   "01b5": "Organization/Nest_Labs/",
   "01d1": "Organization/August_Home_Inc/",
