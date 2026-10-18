@@ -93,6 +93,7 @@ const ble_uuid16 = {
   "fe56": "Organization/Google/",
   "fe55": "Organization/Google/",
   "fe50": "Organization/Google/",
+  "fe4c": "Organization/Volkswagen_AG/",
   "fe4b": "Organization/Signify/",
   "fe48": "Organization/General_Motors/",
   "fe47": "Organization/General_Motors/",
@@ -100,6 +101,8 @@ const ble_uuid16 = {
   "fe36": "Organization/Huawei_Technologies_Co_Ltd/",
   "fe35": "Organization/Huawei_Technologies_Co_Ltd/",
   "fe33": "Organization/CHIPOLO/",
+  "fe31": "Organization/Volkswagen_AG/",
+  "fe30": "Organization/Volkswagen_AG/",
   "fe2c": "Organization/Google/",
   "fe27": "Organization/Google/",
   "fe26": "Organization/Google/",
@@ -202,7 +205,8 @@ const ble_uuid16 = {
   "fc46": "Organization/Xiaomi/",
   "fc3e": "Organization/Google/",
   "fc3d": "Organization/Reelables_Inc/",
-  "fc39": "Organization/HARMAN_International/"
+  "fc39": "Organization/HARMAN_International/",
+  "fc29": "Organization/Google/"
 };
 
 
@@ -263,6 +267,7 @@ const ble_companyIdentifiers = {
   "00f0": "Organization/PayPal_Inc/",
   "0104": "Organization/PLUS_Location_Systems/",
   "011b": "Organization/Aruba_Networks/",
+  "011f": "Organization/Volkswagen_AG/",
   "012d": "Organization/Sony_Corporation/",
   "0131": "Organization/Cypress_Semiconductor_Corporation/",
   "0136": "Organization/Seed_Labs_Inc/",
